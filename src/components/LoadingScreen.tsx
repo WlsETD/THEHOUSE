@@ -1,9 +1,11 @@
 import type { Room } from '../data/types';
+import { useLang } from '../i18n';
 
 interface Props { progress: number; rooms: Room[]; done: boolean; error: string | null }
 
 /** Draws the actual room polygons from rooms.json while the model streams in. */
 export function LoadingScreen({ progress, rooms, done, error }: Props) {
+  const { t } = useLang();
   const W = 14521, H = 12271;
   return (
     <div className={`loading${done ? ' is-done' : ''}`} role="status" aria-live="polite" aria-hidden={done}>
@@ -21,7 +23,7 @@ export function LoadingScreen({ progress, rooms, done, error }: Props) {
               })}
             </svg>
             <div className="meta label">
-              <span>Wu Residence · Plan A-D-11</span>
+              <span>{t('load.title')}</span>
               <span className="num">{String(Math.round(progress * 100)).padStart(3, '0')}%</span>
             </div>
           </>

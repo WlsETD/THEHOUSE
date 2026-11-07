@@ -1,0 +1,10 @@
+{
+ "source": "A-D-11_01.pdf page 1",
+ "extent_plan_mm": [
+  -400,
+  -400,
+  14921,
+  12671
+ ],
+ "note": "ink as alpha; plan mm = (pt - origin) * 25.4/72*50, origin pt (158.89, 78.45)"
+}

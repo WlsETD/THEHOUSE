@@ -11,8 +11,8 @@
   --line: rgba(236, 230, 220, 0.2);
   --scrim: rgba(14, 13, 12, 0.62);
 
-  --f-display: 'Italiana', 'Didot', 'Bodoni 72', 'Times New Roman', serif;
-  --f-ui: 'Jost', 'Futura', 'Avenir Next', 'Helvetica Neue', system-ui, sans-serif;
+  --f-display: 'Italiana', 'Noto Serif TC', 'Noto Serif CJK TC', 'Didot', 'Bodoni 72', 'Times New Roman', serif;
+  --f-ui: 'Jost', 'Noto Sans TC', 'Noto Sans CJK TC', 'PingFang TC', 'Microsoft JhengHei', 'Futura', 'Avenir Next', 'Helvetica Neue', system-ui, sans-serif;
 
   --step--1: clamp(0.68rem, 0.64rem + 0.15vw, 0.76rem);
   --step-0: clamp(0.88rem, 0.84rem + 0.2vw, 1rem);
@@ -36,3 +36,7 @@ button:focus-visible, a:focus-visible { outline: 1px solid var(--oak); outline-o
 .label { font-size: var(--step--1); letter-spacing: 0.22em; text-transform: uppercase; font-weight: 400; }
 .num { font-variant-numeric: tabular-nums lining-nums; }
 .display { font-family: var(--f-display); font-weight: 400; letter-spacing: 0.01em; line-height: 0.98; text-wrap: balance; }
+
+/* Chinese: CJK glyphs need less tracking and no uppercase */
+:lang(zh) .label { letter-spacing: 0.12em; }
+:lang(zh) .display { letter-spacing: 0.06em; line-height: 1.2; font-weight: 500; }

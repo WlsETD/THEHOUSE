@@ -1,0 +1,489 @@
+{
+ "checks": [
+  {
+   "name": "GLB round-trip: wall & column footprints",
+   "status": "PASS",
+   "detail": "65 elements read back from scene.glb; max deviation 0.000 mm"
+  },
+  {
+   "name": "Unique object IDs",
+   "status": "PASS",
+   "detail": "325 objects, 325 unique"
+  },
+  {
+   "name": "Scene is not a single mesh",
+   "status": "PASS",
+   "detail": "325 separately addressable mesh nodes in 325 meshes"
+  },
+  {
+   "name": "Every mesh node carries extras metadata",
+   "status": "PASS",
+   "detail": "0 nodes without extras.id"
+  },
+  {
+   "name": "Every furnishing assigned to a room",
+   "status": "PASS",
+   "detail": "152 furnishings; unassigned: []"
+  },
+  {
+   "name": "Khronos glTF-Validator",
+   "status": "PASS",
+   "detail": "0 errors, 0 warnings, 50 infos"
+  },
+  {
+   "name": "Dimension audit vs annotations",
+   "status": "PASS",
+   "detail": "45/48 within ±2 mm; others are drawing-internal discrepancies (see table)"
+  },
+  {
+   "name": "Furnishings do not penetrate walls/columns",
+   "status": "PASS",
+   "detail": "0 intersections"
+  },
+  {
+   "name": "No furniture/fixture clashes",
+   "status": "PASS",
+   "detail": "0 overlapping pairs (tucked chairs/stools and appliance-in-cabinet pairs exempt)"
+  },
+  {
+   "name": "Furnishings contained in their room polygon",
+   "status": "PASS",
+   "detail": "0 outside (area in 100cm²)"
+  },
+  {
+   "name": "Open door leaves clear of furniture",
+   "status": "PASS",
+   "detail": "0 conflicts"
+  },
+  {
+   "name": "Scroll camera path passes only through openings",
+   "status": "PASS",
+   "detail": "601 samples; 0 wall crossings"
+  },
+  {
+   "name": "Room cameras inside the building, clear of walls",
+   "status": "PASS",
+   "detail": "16 cameras; issues: []"
+  },
+  {
+   "name": "Structural columns preserved",
+   "status": "PASS",
+   "detail": "4 RC columns at drawn positions (gray-filled on A-D-11)"
+  },
+  {
+   "name": "Exterior wall thicknesses",
+   "status": "PASS",
+   "detail": "21 exterior/RC segments; thicknesses found [60, 115, 131, 147, 148, 150, 155] mm (150 typical)"
+  },
+  {
+   "name": "Interior partition thicknesses",
+   "status": "PASS",
+   "detail": "28 partitions; thicknesses [85, 99, 100, 138, 139, 140] mm"
+  },
+  {
+   "name": "Openings modelled",
+   "status": "PASS",
+   "detail": "9 swing doors, 8 sliding units, 5 windows, 1 open passage"
+  }
+ ],
+ "stats": {
+  "nodes": 446,
+  "mesh_nodes": 325,
+  "meshes": 325,
+  "materials": 40,
+  "textures": 58,
+  "triangles": 37992,
+  "lights": 21,
+  "cameras": 20,
+  "glb_mb": 8.79
+ },
+ "dimensions": [
+  {
+   "label": "2279",
+   "drawing_mm": 2279,
+   "model_mm": 2279.0,
+   "delta_mm": 0.0,
+   "item": "Storage room clear width (W_INT_01 → COL_01)",
+   "status": "OK"
+  },
+  {
+   "label": "1600",
+   "drawing_mm": 1600,
+   "model_mm": 1600.0,
+   "delta_mm": 0.0,
+   "item": "Shoe cabinet length",
+   "status": "OK"
+  },
+  {
+   "label": "300",
+   "drawing_mm": 300,
+   "model_mm": 300.0,
+   "delta_mm": 0.0,
+   "item": "Storage north shelving depth",
+   "status": "OK"
+  },
+  {
+   "label": "660",
+   "drawing_mm": 660,
+   "model_mm": 660.0,
+   "delta_mm": 0.0,
+   "item": "Storage east shelving run",
+   "status": "OK"
+  },
+  {
+   "label": "871",
+   "drawing_mm": 871,
+   "model_mm": 871.0,
+   "delta_mm": 0.0,
+   "item": "Storage south shelving",
+   "status": "OK"
+  },
+  {
+   "label": "600",
+   "drawing_mm": 600,
+   "model_mm": 600.0,
+   "delta_mm": 0.0,
+   "item": "Coat closet depth",
+   "status": "OK"
+  },
+  {
+   "label": "1200",
+   "drawing_mm": 1200,
+   "model_mm": 1200.0,
+   "delta_mm": 0.0,
+   "item": "West joinery face → storage wall",
+   "status": "OK"
+  },
+  {
+   "label": "1791",
+   "drawing_mm": 1791,
+   "model_mm": 1790.0,
+   "delta_mm": -1.0,
+   "item": "Lacquered-glass wall (烤漆玻璃牆)",
+   "status": "OK"
+  },
+  {
+   "label": "900",
+   "drawing_mm": 900,
+   "model_mm": 900.0,
+   "delta_mm": 0.0,
+   "item": "Fridge alcove width",
+   "status": "OK"
+  },
+  {
+   "label": "600",
+   "drawing_mm": 600,
+   "model_mm": 599.0,
+   "delta_mm": -1.0,
+   "item": "Appliance cabinet bay",
+   "status": "OK"
+  },
+  {
+   "label": "159",
+   "drawing_mm": 159,
+   "model_mm": 159.0,
+   "delta_mm": 0.0,
+   "item": "Gap appliance bay → kitchen partition",
+   "status": "OK"
+  },
+  {
+   "label": "2200",
+   "drawing_mm": 2200,
+   "model_mm": 2200.0,
+   "delta_mm": 0.0,
+   "item": "West joinery run 1",
+   "status": "OK"
+  },
+  {
+   "label": "1075",
+   "drawing_mm": 1075,
+   "model_mm": 1074.0,
+   "delta_mm": -1.0,
+   "item": "Display shelves (展示層板)",
+   "status": "OK"
+  },
+  {
+   "label": "1440",
+   "drawing_mm": 1440,
+   "model_mm": 1440.0,
+   "delta_mm": 0.0,
+   "item": "Storage cabinet",
+   "status": "OK"
+  },
+  {
+   "label": "2632",
+   "drawing_mm": 2632,
+   "model_mm": 2631.0,
+   "delta_mm": -1.0,
+   "item": "TV unit",
+   "status": "OK"
+  },
+  {
+   "label": "932",
+   "drawing_mm": 932,
+   "model_mm": 933.0,
+   "delta_mm": 1.0,
+   "item": "Storage cabinet (south)",
+   "status": "OK"
+  },
+  {
+   "label": "8279",
+   "drawing_mm": 8279,
+   "model_mm": 8278.0,
+   "delta_mm": -1.0,
+   "item": "West wall joinery chain 2200+1075+1440+2632+932",
+   "status": "OK"
+  },
+  {
+   "label": "3294",
+   "drawing_mm": 3294,
+   "model_mm": 3301.0,
+   "delta_mm": 7.0,
+   "item": "Kitchen run 1000+1000+1294",
+   "status": "NOTE"
+  },
+  {
+   "label": "835",
+   "drawing_mm": 835,
+   "model_mm": 835.0,
+   "delta_mm": 0.0,
+   "item": "Kitchen south sliding door",
+   "status": "OK"
+  },
+  {
+   "label": "340",
+   "drawing_mm": 340,
+   "model_mm": 339.0,
+   "delta_mm": -1.0,
+   "item": "Play-room west track offset",
+   "status": "OK"
+  },
+  {
+   "label": "1200+1200",
+   "drawing_mm": 2400,
+   "model_mm": 2400.0,
+   "delta_mm": 0.0,
+   "item": "Play-room north sliding doors",
+   "status": "OK"
+  },
+  {
+   "label": "1130",
+   "drawing_mm": 1130,
+   "model_mm": 1130.0,
+   "delta_mm": 0.0,
+   "item": "Play-room west sliding door",
+   "status": "OK"
+  },
+  {
+   "label": "700",
+   "drawing_mm": 700,
+   "model_mm": 700.0,
+   "delta_mm": 0.0,
+   "item": "Sofa depth",
+   "status": "OK"
+  },
+  {
+   "label": "70",
+   "drawing_mm": 70,
+   "model_mm": 70.0,
+   "delta_mm": 0.0,
+   "item": "Sofa → partition gap",
+   "status": "OK"
+  },
+  {
+   "label": "350",
+   "drawing_mm": 350,
+   "model_mm": 349.0,
+   "delta_mm": -1.0,
+   "item": "Partition → bookcase face",
+   "status": "OK"
+  },
+  {
+   "label": "2395",
+   "drawing_mm": 2395,
+   "model_mm": 2414.0,
+   "delta_mm": 19.0,
+   "item": "Sofa length (annotation 2395 vs drawn outline)",
+   "status": "NOTE"
+  },
+  {
+   "label": "1312",
+   "drawing_mm": 1312,
+   "model_mm": 1311.0,
+   "delta_mm": -1.0,
+   "item": "KIDS bookcase (from partition end)",
+   "status": "OK"
+  },
+  {
+   "label": "1103",
+   "drawing_mm": 1103,
+   "model_mm": 1103.0,
+   "delta_mm": 0.0,
+   "item": "Open bookcase",
+   "status": "OK"
+  },
+  {
+   "label": "850",
+   "drawing_mm": 850,
+   "model_mm": 851.0,
+   "delta_mm": 1.0,
+   "item": "Cat cabinet width",
+   "status": "OK"
+  },
+  {
+   "label": "1500",
+   "drawing_mm": 1500,
+   "model_mm": 1500.0,
+   "delta_mm": 0.0,
+   "item": "Cat cabinet length",
+   "status": "OK"
+  },
+  {
+   "label": "1350",
+   "drawing_mm": 1350,
+   "model_mm": 1349.0,
+   "delta_mm": -1.0,
+   "item": "Kids wardrobe",
+   "status": "OK"
+  },
+  {
+   "label": "1685",
+   "drawing_mm": 1685,
+   "model_mm": 1685.0,
+   "delta_mm": 0.0,
+   "item": "Kids bookcase bay",
+   "status": "OK"
+  },
+  {
+   "label": "300",
+   "drawing_mm": 300,
+   "model_mm": 300.0,
+   "delta_mm": 0.0,
+   "item": "Kids bookcase depth",
+   "status": "OK"
+  },
+  {
+   "label": "395",
+   "drawing_mm": 395,
+   "model_mm": 395.0,
+   "delta_mm": 0.0,
+   "item": "Study bookcase depth",
+   "status": "OK"
+  },
+  {
+   "label": "1585",
+   "drawing_mm": 1585,
+   "model_mm": 1585.0,
+   "delta_mm": 0.0,
+   "item": "Study bookcase length",
+   "status": "OK"
+  },
+  {
+   "label": "600",
+   "drawing_mm": 600,
+   "model_mm": 600.0,
+   "delta_mm": 0.0,
+   "item": "Kids wardrobe depth (annotation) – drawn carcass incl. doors = 656",
+   "status": "OK"
+  },
+  {
+   "label": "1650",
+   "drawing_mm": 1650,
+   "model_mm": 1649.0,
+   "delta_mm": -1.0,
+   "item": "Robe north run",
+   "status": "OK"
+  },
+  {
+   "label": "1900",
+   "drawing_mm": 1900,
+   "model_mm": 1899.0,
+   "delta_mm": -1.0,
+   "item": "Robe west run beyond corner",
+   "status": "OK"
+  },
+  {
+   "label": "Queen 1820",
+   "drawing_mm": 1820,
+   "model_mm": 1820.0,
+   "delta_mm": 0.0,
+   "item": "Master bed width (excl. headboard overhang)",
+   "status": "OK"
+  },
+  {
+   "label": "Queen 1900",
+   "drawing_mm": 1900,
+   "model_mm": 1906.0,
+   "delta_mm": 6.0,
+   "item": "Master bed length (excl. headboard)",
+   "status": "NOTE"
+  },
+  {
+   "label": "Queen 1820",
+   "drawing_mm": 1820,
+   "model_mm": 1820.0,
+   "delta_mm": 0.0,
+   "item": "Kids bed width",
+   "status": "OK"
+  },
+  {
+   "label": "1500×1000",
+   "drawing_mm": 1500,
+   "model_mm": 1500.0,
+   "delta_mm": 0.0,
+   "item": "Dining table length",
+   "status": "OK"
+  },
+  {
+   "label": "1500×1000",
+   "drawing_mm": 1000,
+   "model_mm": 1000.0,
+   "delta_mm": 0.0,
+   "item": "Dining table width",
+   "status": "OK"
+  },
+  {
+   "label": "72公分高",
+   "drawing_mm": 720,
+   "model_mm": 720.0,
+   "delta_mm": 0.0,
+   "item": "Dining table height",
+   "status": "OK"
+  },
+  {
+   "label": "90公分高",
+   "drawing_mm": 900,
+   "model_mm": 900.0,
+   "delta_mm": 0.0,
+   "item": "Island benchtop height (top of 40 mm stone = 920 incl. edge)",
+   "status": "OK"
+  },
+  {
+   "label": "Overall",
+   "drawing_mm": 14521,
+   "model_mm": 14521.0,
+   "delta_mm": 0.0,
+   "item": "Overall width incl. east balcony",
+   "status": "OK"
+  },
+  {
+   "label": "Overall",
+   "drawing_mm": 12271,
+   "model_mm": 12271.0,
+   "delta_mm": 0.0,
+   "item": "Overall depth incl. south balconies",
+   "status": "OK"
+  },
+  {
+   "label": "Column",
+   "drawing_mm": 1200,
+   "model_mm": 1200.0,
+   "delta_mm": 0.0,
+   "item": "NE column",
+   "status": "OK"
+  }
+ ],
+ "camera_notes": [
+  "R01_ENTRY camera stands in R03_DINING (open-plan view into the room)"
+ ]
+}

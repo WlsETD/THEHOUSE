@@ -24,10 +24,18 @@ export interface LoadedModel {
 export async function loadModel(onProgress: (f: number) => void): Promise<LoadedModel> {
   const manager = new LoadingManager();
   const draco = new DRACOLoader(manager).setDecoderPath('./draco/');
+  // hosts that cannot serve .wasm (e.g. the preview artifact) use the pure-JS decoder
+  if (import.meta.env.VITE_DRACO_JS) draco.setDecoderConfig({ type: 'js' });
   const loader = new GLTFLoader(manager).setDRACOLoader(draco);
   const original = new URLSearchParams(location.search).get('model') === 'original';
   const url = original ? './models/scene.glb' : (import.meta.env.VITE_MODEL_URL as string | undefined) || './models/scene.opt.glb';
-  const gltf = await loader.loadAsync(url, e => { if (e.total) onProgress(e.loaded / e.total); });
+  const progress = (e: ProgressEvent) => { if (e.total) onProgress(e.loaded / e.total); };
+  // scene.opt.glb is a build artifact (gitignored, made by `npm run optimize:model`); fall back if it is absent
+  const gltf = await loader.loadAsync(url, progress).catch(err => {
+    if (url === './models/scene.glb') throw err;
+    console.warn(`[ModelLoader] ${url} failed, falling back to scene.glb`, err);
+    return loader.loadAsync('./models/scene.glb', progress);
+  });
   draco.dispose();
   const root = gltf.scene;
   const out: LoadedModel = {
