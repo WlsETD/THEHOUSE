@@ -19,6 +19,18 @@ w('| # | Check | Result | Detail |');
 w('|---|---|---|---|');
 e2e.results.forEach((r, i) => w(`| ${i + 1} | ${r.name} | **${r.status}** | ${String(r.detail ?? '').replace(/\|/g, '/').replace(/\n/g, ' ').slice(0, 260)} |`));
 w('');
+const extra = ['reports/studio-results.json', 'reports/studio-mobile-results.json'].filter(f => fs.existsSync(f)).flatMap(f => JSON.parse(fs.readFileSync(f, 'utf8')).results);
+if (extra.length) {
+  const ep = extra.filter(r => r.status === 'PASS').length;
+  w('## 1b. Design studio, language and scene bar (tests/studio.mjs, tests/studio-mobile.mjs)');
+  w('');
+  w(`**${ep} passed, ${extra.length - ep} failed.** Desktop 1280 × 800, iPhone 13 and iPad emulation.`);
+  w('');
+  w('| # | Check | Result | Detail |');
+  w('|---|---|---|---|');
+  extra.forEach((r, i) => w(`| ${i + 1} | ${r.name} | **${r.status}** | ${String(r.detail ?? '').replace(/\|/g, '/').replace(/\n/g, ' ').slice(0, 200)} |`));
+  w('');
+}
 w('## 2. Camera path (scripts/qa-path.ts)');
 w('');
 w('The QA replays the exact runtime `CameraPath` against every wall, column, opening header, closed glazing, door frame jamb, open door leaf (rotated) and furniture bounding box in `scene.json`, with a 0.15 m camera radius. Ceilings count as obstacles while they are shown.');
@@ -44,6 +56,8 @@ w('- **Frame rate on real GPUs.** Tests run on a CPU software renderer (SwiftSha
 w('- **Safari, Firefox, iOS Safari, Android Chrome.** Only Chromium was run. Mobile and tablet were emulated (viewport, touch, DPR 2); no physical device was used.');
 w('- **Real touch hardware.** The mobile swipe used a synthesised touch-scroll gesture.');
 w('- **Fonts.** Google Fonts (Italiana, Jost) were unreachable from the test sandbox, so screenshots show the fallback serif and sans. With network access the intended faces load.');
+w('- **Studio exports** were checked for file type and size only; the exported .glb / .obj were not opened in SketchUp, Blender or Revit. The .glb export took about 40 s on the software renderer; on a real GPU it should be much faster but this is not measured.');
+w('- **Colour accuracy** of finishes and the sun model are visual approximations (sRGB swatches on PBR textures; textbook solar geometry, plan north assumed = page-up because A-D-11 has no north arrow).');
 w('- **JS heap** is reported by Chromium only (`performance.memory`); GPU resource counts were checked instead and stayed constant.');
 w('');
 w('## 5. Screenshots');

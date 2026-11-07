@@ -15,7 +15,8 @@ async function open(viewport, opts = {}) {
   pg.setDefaultTimeout(240000);
   pg.on('console', m => { if (m.type() === 'error' && !/ERR_TUNNEL|fonts/.test(m.text())) errors.push(`[${viewport.width}] ${m.text()}`); });
   pg.on('pageerror', e => errors.push(`[${viewport.width}] PAGEERROR ${e.message}`));
-  await pg.goto(URL);
+  // the regression suite reads English labels
+  await pg.goto(URL + (URL.includes('?') ? '&' : '?') + 'lang=en');
   await pg.waitForFunction(() => window.__wu && document.querySelector('.loading.is-done'), null, { timeout: 240000 });
   await pg.waitForTimeout(1500);
   return { ctx, pg };
@@ -25,7 +26,8 @@ async function goP(pg, p) {
   await pg.waitForFunction(p => Math.abs(window.__wu.manager.progress - p) < 0.0008, p, { timeout: 240000 });
   await pg.waitForTimeout(700);
 }
-const state = pg => pg.evaluate(() => { const m = window.__wu.manager; const c = m.cam.camera; return { p: m.progress, mode: m.cam.mode, pos: c.position.toArray().map(v => +v.toFixed(3)), fov: +c.fov.toFixed(2), ceiling: +m.cam.ceiling.toFixed(2), active: document.querySelector('.nav [aria-current=step] .nm')?.textContent, counter: document.querySelector('.counter .big')?.textContent }; });
+// read after two animation frames, so the render loop has applied the current progress (software GL runs at ~1 fps)
+const state = pg => pg.evaluate(async () => { await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))); const m = window.__wu.manager; const c = m.cam.camera; return { p: m.progress, mode: m.cam.mode, pos: c.position.toArray().map(v => +v.toFixed(3)), fov: +c.fov.toFixed(2), ceiling: +m.cam.ceiling.toFixed(2), active: document.querySelector('.dock-rail [aria-current=step] .nm')?.textContent, counter: document.querySelector('.dock-list .num')?.textContent }; });
 
 if (ONLY === 'all' || ONLY === 'desktop') {
   const { ctx, pg } = await open({ width: 1440, height: 900 });
@@ -55,7 +57,7 @@ if (ONLY === 'all' || ONLY === 'desktop') {
   await pg.waitForTimeout(2500); const w1 = await state(pg);
   rec('mouse wheel advances the film', w1.p > w0.p, `p ${w0.p.toFixed(4)} → ${w1.p.toFixed(4)}`);
   // 5. nav click
-  await pg.hover('.nav'); await pg.click('.nav button:nth-child(5)');
+  await pg.locator('.dock-rail button:nth-child(5)').dispatchEvent('click');
   await pg.waitForTimeout(4000);
   await pg.waitForFunction(() => Math.abs(window.__wu.manager.progress - window.__wu.scroll.raw) < 0.001, null, { timeout: 240000 });
   const n = await state(pg);

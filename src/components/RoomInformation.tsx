@@ -4,6 +4,8 @@ import type { ChapterWindow } from '../animation/CameraPath';
 import { chapterVisibility } from '../animation/RoomTransitions';
 import type { RoomStory, MaterialStory } from '../data/roomData';
 import type { Room, Material, SceneObject } from '../data/types';
+import { useLang } from '../i18n';
+import { ROOM_STORIES_ZH, MATERIAL_STORIES_ZH } from '../data/roomData.zh';
 
 interface Props {
   manager: SceneManager | null;
@@ -18,6 +20,8 @@ interface Props {
 
 /** Room + material panels; opacity and slide are driven every frame from scroll progress. */
 export function RoomInformation({ manager, chapters, stories, materialStories, rooms, materials, objects, reduced }: Props) {
+  const { t, lang } = useLang();
+  const zh = lang === 'zh';
   const refs = useRef<(HTMLElement | null)[]>([]);
   useEffect(() => {
     if (!manager) return;
@@ -48,17 +52,19 @@ export function RoomInformation({ manager, chapters, stories, materialStories, r
         if (story) {
           const r = roomById.get(story.room)!;
           const n = roomNo.get(story.room)!;
+          const z = zh ? ROOM_STORIES_ZH[story.room] : undefined;
+          const mname = (k: string) => (zh ? materials[k]?.name_zh : shortName(materials[k]?.name_en ?? k)) ?? k;
           return (
             <article key={c.chapter} ref={set} className="chapter" aria-hidden="true">
               <div className="index label"><span className="n num">{String(n).padStart(2, '0')}</span><span>/ {String(stories.length).padStart(2, '0')}</span></div>
-              <h2>{story.title}<span className="zh">{r.name_zh}</span></h2>
-              <p className="line">{story.line}</p>
-              <p className="concept">{story.concept}</p>
+              <h2>{z?.title ?? story.title}<span className="zh">{zh ? story.title : r.name_zh}</span></h2>
+              <p className="line">{z?.line ?? story.line}</p>
+              <p className="concept">{z?.concept ?? story.concept}</p>
               <dl className="facts label">
-                <dt>Area</dt><dd className="area num">{r.area_m2.toFixed(2)} m²</dd>
-                <dt>Materials</dt><dd className="mats">{story.materials.map(k => shortName(materials[k]?.name_en ?? k)).join(' / ')}</dd>
-                <dt>Features</dt><dd>{story.features.join(' · ')}</dd>
-                <dt>Furniture</dt><dd>{story.furniture.join(' · ')}</dd>
+                <dt>{t('ch.area')}</dt><dd className="area num">{r.area_m2.toFixed(2)} m²</dd>
+                <dt>{t('ch.materials')}</dt><dd className="mats">{story.materials.map(mname).join(' / ')}</dd>
+                <dt>{t('ch.features')}</dt><dd>{(z?.features ?? story.features).join(' · ')}</dd>
+                <dt>{t('ch.furniture')}</dt><dd>{(z?.furniture ?? story.furniture).join(' · ')}</dd>
               </dl>
             </article>
           );
@@ -69,28 +75,30 @@ export function RoomInformation({ manager, chapters, stories, materialStories, r
           let count = 0;
           for (const k of keys) for (const id of materials[k].used_by) {
             const o = objById.get(id); if (!o) continue; count++;
-            if (o.room && roomById.get(o.room)?.kind === 'interior') usedRooms.add(roomById.get(o.room)!.name_en);
+            if (o.room && roomById.get(o.room)?.kind === 'interior') { const rr = roomById.get(o.room)!; usedRooms.add(zh ? rr.name_zh : rr.name_en); }
           }
           const m = materials[ms.key];
+          const mz = zh ? MATERIAL_STORIES_ZH[ms.key] : undefined;
+          const mn = (k: string) => (zh ? materials[k].name_zh : materials[k].name_en);
           return (
             <article key={c.chapter} ref={set} className="material" aria-hidden="true">
-              <div className="label" style={{ color: 'var(--bone-faint)' }}>Material · {m.category}</div>
-              <h2 className="display" style={{ fontSize: 'var(--step-3)', margin: '14px 0 0' }}>{ms.title}</h2>
-              <p className="concept" style={{ color: 'var(--bone-dim)', lineHeight: 1.6, margin: '16px 0 0' }}>{ms.note}</p>
+              <div className="label" style={{ color: 'var(--bone-faint)' }}>{t('mat.label')} · {m.category}</div>
+              <h2 className="display" style={{ fontSize: 'var(--step-3)', margin: '14px 0 0' }}>{mz?.title ?? ms.title}</h2>
+              <p className="concept" style={{ color: 'var(--bone-dim)', lineHeight: 1.6, margin: '16px 0 0' }}>{mz?.note ?? ms.note}</p>
               <div className="swatches">
-                {keys.map(k => <span key={k} className="sw" title={materials[k].name_en} style={swatch(materials[k])} />)}
+                {keys.map(k => <span key={k} className="sw" title={mn(k)} style={swatch(materials[k])} />)}
               </div>
-              <p className="where label">{keys.map(k => materials[k].name_en).join(' · ')}<br />
-                Applied to {count} objects in {[...usedRooms].slice(0, 5).join(', ')}{usedRooms.size > 5 ? ` +${usedRooms.size - 5}` : ''}</p>
+              <p className="where label">{keys.map(mn).join(' · ')}<br />
+                {t('mat.applied', { n: count })}{[...usedRooms].slice(0, 5).join(zh ? '、' : ', ')}{usedRooms.size > 5 ? ` +${usedRooms.size - 5}` : ''}</p>
             </article>
           );
         }
         if (c.chapter === 'materials') {
           return (
             <div key={c.chapter} ref={set} className="mat-intro" aria-hidden="true">
-              <div className="label" style={{ color: 'var(--bone-dim)' }}>Interlude</div>
-              <h2 className="display">Material Experience</h2>
-              <p className="label" style={{ color: 'var(--bone-faint)', marginTop: 18 }}>{Object.keys(materials).length} PBR materials · materials.json</p>
+              <div className="label" style={{ color: 'var(--bone-dim)' }}>{t('mat.interlude')}</div>
+              <h2 className="display">{t('mat.experience')}</h2>
+              <p className="label" style={{ color: 'var(--bone-faint)', marginTop: 18 }}>{t('mat.count', { n: Object.keys(materials).length })}</p>
             </div>
           );
         }

@@ -2,9 +2,11 @@ import { useEffect, useRef } from 'react';
 import type { SceneManager } from '../three/SceneManager';
 import type { ChapterWindow } from '../animation/CameraPath';
 import type { Room, RoomsFile, SceneFile } from '../data/types';
+import { useLang } from '../i18n';
 
 /** Hero copy — visible on the establishing shot, fades as soon as the visitor scrolls. */
 export function HeroOverlay({ manager, roomCount }: { manager: SceneManager | null; roomCount: number }) {
+  const { t } = useLang();
   const el = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!manager) return;
@@ -18,19 +20,20 @@ export function HeroOverlay({ manager, roomCount }: { manager: SceneManager | nu
   return (
     <div className="hero fade-enter" ref={el}>
       <div className="hero-title">
-        <h1 className="display">A Space to Experience.</h1>
-        <p>Designed Around<br />The Art of Living.</p>
-        <div className="hero-meta label"><span>Xindian, New Taipei</span><span>Project ACL16004</span><span className="num">{roomCount} spaces</span></div>
+        <h1 className="display">{t('hero.title')}</h1>
+        <p>{t('hero.sub1')}<br />{t('hero.sub2')}</p>
+        <div className="hero-meta label"><span>{t('hero.place')}</span><span>{t('hero.project')}</span><span className="num">{roomCount} {t('hero.spaces')}</span></div>
       </div>
-      <div className="scroll-cue label"><span>Scroll to explore</span><span className="rail" aria-hidden="true" /></div>
+      <div className="scroll-cue label"><span>{t('hero.cue')}</span><span className="rail" aria-hidden="true" /></div>
     </div>
   );
 }
 
 /** Final overview — project facts, all from rooms.json / scene.json. */
-export function Finale({ manager, window: w, rooms, scene, onExplore, onRestart }: {
-  manager: SceneManager | null; window: ChapterWindow | undefined; rooms: RoomsFile; scene: SceneFile; onExplore: () => void; onRestart: () => void;
+export function Finale({ manager, window: w, rooms, scene, onExplore, onRestart, onStudio }: {
+  manager: SceneManager | null; window: ChapterWindow | undefined; rooms: RoomsFile; scene: SceneFile; onExplore: () => void; onRestart: () => void; onStudio: () => void;
 }) {
+  const { t } = useLang();
   const el = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!manager || !w) return;
@@ -46,24 +49,26 @@ export function Finale({ manager, window: w, rooms, scene, onExplore, onRestart 
   const [, , bw, bh] = scene.meta.bbox_plan_mm;
   return (
     <section className="finale" ref={el} aria-label="Project summary">
-      <div className="label" style={{ color: 'var(--bone-dim)' }}>Final overview</div>
-      <h2 className="display">Wu Residence</h2>
+      <div className="label" style={{ color: 'var(--bone-dim)' }}>{t('fin.label')}</div>
+      <h2 className="display">{t('fin.title')}</h2>
       <div className="facts label">
-        <div><span>Interior</span><b className="num">{rooms.totals.interior_m2.toFixed(2)} m²</b></div>
-        <div><span>Balconies</span><b className="num">{rooms.totals.balcony_m2.toFixed(2)} m²</b></div>
-        <div><span>Spaces</span><b className="num">{interior} + {outdoor} outdoor</b></div>
-        <div><span>Footprint</span><b className="num">{(bw / 1000).toFixed(2)} × {(bh / 1000).toFixed(2)} m</b></div>
+        <div><span>{t('fin.interior')}</span><b className="num">{rooms.totals.interior_m2.toFixed(2)} m²</b></div>
+        <div><span>{t('fin.balconies')}</span><b className="num">{rooms.totals.balcony_m2.toFixed(2)} m²</b></div>
+        <div><span>{t('fin.spaces')}</span><b className="num">{interior} + {outdoor} {t('fin.outdoor')}</b></div>
+        <div><span>{t('fin.footprint')}</span><b className="num">{(bw / 1000).toFixed(2)} × {(bh / 1000).toFixed(2)} m</b></div>
       </div>
       <div className="actions label">
-        <button onClick={onExplore}>Explore freely</button>
-        <button onClick={onRestart}>Back to the beginning</button>
+        <button className="cta" onClick={onStudio}>{t('fin.studio')}</button>
+        <button onClick={onExplore}>{t('fin.explore')}</button>
+        <button onClick={onRestart}>{t('fin.restart')}</button>
       </div>
-      <p className="credit">{scene.meta.project} · {scene.meta.project_no} · Plan {scene.meta.drawing} · {scene.meta.scale} · Model {scene.meta.model_version}. Rendered live in WebGL; heights not dimensioned on the drawing are assumptions.</p>
+      <p className="credit">{scene.meta.project} · {scene.meta.project_no} · {scene.meta.drawing} · {scene.meta.scale} · Model {scene.meta.model_version}. {t('fin.credit')}</p>
     </section>
   );
 }
 
 export function IndexMenu({ rooms, chapterOf, onGo, onClose }: { rooms: Room[]; chapterOf: (id: string) => number | null; onGo: (p: number) => void; onClose: () => void }) {
+  const { t, lang } = useLang();
   useEffect(() => {
     const k = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     addEventListener('keydown', k); return () => removeEventListener('keydown', k);
@@ -77,7 +82,7 @@ export function IndexMenu({ rooms, chapterOf, onGo, onClose }: { rooms: Room[]; 
           <li key={r.id}>
             <button disabled={p === null} onClick={() => { if (p !== null) { onGo(p); onClose(); } }}>
               <span className="label num">{String(start + i + 1).padStart(2, '0')}</span>
-              <span>{r.name_en}<span className="zh">{r.name_zh}</span></span>
+              <span>{lang === 'zh' ? r.name_zh : r.name_en}<span className="zh">{lang === 'zh' ? r.name_en : r.name_zh}</span></span>
               <span className="label num">{r.area_m2.toFixed(2)} m²</span>
             </button>
           </li>
@@ -88,34 +93,37 @@ export function IndexMenu({ rooms, chapterOf, onGo, onClose }: { rooms: Room[]; 
   const inside = group(['interior']);
   return (
     <div className="index-menu" role="dialog" aria-modal="true" aria-label="Index of spaces">
-      <h2 className="display">Index of spaces</h2>
+      <h2 className="display">{t('idx.title')}</h2>
       <div className="index-cols">
-        <div><p className="label" style={{ color: 'var(--bone-faint)' }}>Interior · {inside.length}</p>{list(inside, 0)}</div>
-        <div><p className="label" style={{ color: 'var(--bone-faint)' }}>Outdoor · {rooms.length - inside.length}</p>{list(group(['balcony', 'ledge']), inside.length)}</div>
+        <div><p className="label" style={{ color: 'var(--bone-faint)' }}>{t('idx.interior')} · {inside.length}</p>{list(inside, 0)}</div>
+        <div><p className="label" style={{ color: 'var(--bone-faint)' }}>{t('idx.outdoor')} · {rooms.length - inside.length}</p>{list(group(['balcony', 'ledge']), inside.length)}</div>
       </div>
     </div>
   );
 }
 
-export function ExploreToolbar({ onReset, onOverview, onPlan, onExit, onFullscreen, pick, onClearPick }: {
+export function ExploreToolbar({ onReset, onOverview, onPlan, onExit, onFullscreen, pick, onClearPick, onEdit, studio }: {
   onReset: () => void; onOverview: () => void; onPlan: () => void; onExit: () => void; onFullscreen: () => void;
-  pick: Record<string, unknown> | null; onClearPick: () => void;
+  pick: Record<string, unknown> | null; onClearPick: () => void; onEdit: () => void; studio: boolean;
 }) {
+  const { t } = useLang();
   return (
     <>
-      <p className="hint label">Drag to orbit · scroll or pinch to zoom · right-drag or two fingers to pan · click an object for its ID</p>
-      <div className="toolbar label" role="toolbar" aria-label="Free explore">
-        <button onClick={onReset}>Reset view</button>
-        <button onClick={onOverview}>Overview</button>
-        <button onClick={onPlan}>Floor plan</button>
-        <button onClick={onFullscreen}>Fullscreen</button>
-        <button className="primary" onClick={onExit}>Back to tour</button>
+      {!studio && <p className="hint label">{t('ex.hint')}</p>}
+      <div className={`toolbar label${studio ? ' with-studio' : ''}`} role="toolbar" aria-label="Free explore">
+        <button onClick={onReset}>{t('ex.reset')}</button>
+        <button onClick={onOverview}>{t('ex.overview')}</button>
+        <button onClick={onPlan}>{t('ex.plan')}</button>
+        <button onClick={onFullscreen}>{t('h.fs')}</button>
+        <button className="primary" onClick={onExit}>{t('ex.back')}</button>
       </div>
-      {pick && (
-        <div className="pick" onClick={onClearPick}>
+      {pick && !studio && (
+        <div className="pick">
+          <button className="pick-x" onClick={onClearPick} aria-label={t('h.close')}>✕</button>
           <div className="label id">{String(pick.id)}</div>
           <div>{String(pick.name)}</div>
           <div className="label" style={{ color: 'var(--bone-dim)' }}>{String(pick.category)} · {String(pick.room ?? '—')} · {String(pick.layer)}</div>
+          <button className="pick-edit label" onClick={onEdit}>{t('ex.edit')}</button>
         </div>
       )}
     </>
