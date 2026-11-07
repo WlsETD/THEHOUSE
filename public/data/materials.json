@@ -1,0 +1,1311 @@
+{
+ "note": "PBR metallic-roughness (glTF 2.0). Colours sRGB. Textures procedurally generated for this model (no third-party assets).",
+ "materials": {
+  "wall_paint": {
+   "category": "Painted Surface",
+   "name_zh": "乳膠漆牆面（暖白）",
+   "name_en": "Low-sheen acrylic, warm white",
+   "gltf_material_index": 0,
+   "pbr": {
+    "baseColor_srgb": "#ece8e1",
+    "roughness": 0.9,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "D01_MAIN_HDR",
+    "D02_STORE_HDR",
+    "D04_BACK_HDR",
+    "D05_BATH1_HDR",
+    "D06_BATH2_HDR",
+    "D07_KIDS_HDR",
+    "D08_MASTER_HDR",
+    "D09_MBATH_HDR",
+    "P01_ROBE_HDR",
+    "SD01_KITCHEN_W_HDR",
+    "SD02_KITCHEN_S_HDR",
+    "SD03_PLAY_N_HDR",
+    "SD04_PLAY_W_HDR",
+    "SD05_LIVING_S_HDR",
+    "SD06_PLAY_S_HDR",
+    "SD07_MASTER_S_HDR",
+    "SD08_STUDY_E_HDR",
+    "WN01_UTIL_HDR",
+    "WN02_BATH1_HDR",
+    "WN03_KIDS_HDR",
+    "WN04_MASTER_E_HDR",
+    "WN05_MBATH_HDR",
+    "W_EXT_E01",
+    "W_EXT_E02",
+    "W_EXT_E03",
+    "W_EXT_N01",
+    "W_EXT_N02a",
+    "W_EXT_N02b",
+    "W_EXT_N03",
+    "W_EXT_N04",
+    "W_EXT_S01",
+    "W_EXT_S02",
+    "W_EXT_S03",
+    "W_EXT_S04",
+    "W_EXT_S05",
+    "W_EXT_S06",
+    "W_EXT_S07",
+    "W_EXT_S08",
+    "W_EXT_S09",
+    "W_EXT_S10",
+    "W_EXT_W01",
+    "W_EXT_W02",
+    "W_EXT_W03",
+    "W_INT_01",
+    "W_INT_02",
+    "W_INT_03",
+    "W_INT_04",
+    "W_INT_05",
+    "W_INT_06",
+    "W_INT_07",
+    "W_INT_08",
+    "W_INT_09",
+    "W_INT_10",
+    "W_INT_11",
+    "W_INT_12",
+    "W_INT_13",
+    "W_INT_14",
+    "W_INT_15",
+    "W_INT_16",
+    "W_INT_17",
+    "W_INT_18",
+    "W_INT_19",
+    "W_INT_20",
+    "W_INT_21",
+    "W_INT_22",
+    "W_INT_23",
+    "W_INT_24",
+    "W_INT_25",
+    "W_INT_26",
+    "W_INT_27",
+    "W_INT_28",
+    "W_SHAFT_1",
+    "W_SHAFT_2",
+    "W_UTL_E01"
+   ],
+   "textures": {
+    "baseColor": null,
+    "normal": "textures/plaster_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/plaster_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 2.0
+  },
+  "ceiling_paint": {
+   "category": "Painted Surface",
+   "name_zh": "天花板平光漆",
+   "name_en": "Flat ceiling white",
+   "gltf_material_index": 12,
+   "pbr": {
+    "baseColor_srgb": "#f6f4f0",
+    "roughness": 0.95,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "CEIL_R01_ENTRY",
+    "CEIL_R02_STORE",
+    "CEIL_R03_DINING",
+    "CEIL_R04_KITCHEN",
+    "CEIL_R05_LIVING",
+    "CEIL_R06_HALL",
+    "CEIL_R07_PLAY",
+    "CEIL_R08_BATH1",
+    "CEIL_R09_BATH2",
+    "CEIL_R10_KIDS",
+    "CEIL_R11_STUDY",
+    "CEIL_R12_CLOSET",
+    "CEIL_R13_MBATH",
+    "CEIL_R14_MASTER"
+   ]
+  },
+  "wall_render": {
+   "category": "Concrete",
+   "name_zh": "外牆水泥粉光",
+   "name_en": "Exterior render",
+   "gltf_material_index": 1,
+   "pbr": {
+    "baseColor_srgb": "#d6d0c6",
+    "roughness": 0.92,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "EXT_CANOPY_E",
+    "EXT_LEDGE_E2",
+    "FLR_SLAB",
+    "W_PAR_E1",
+    "W_PAR_E2",
+    "W_PAR_E3",
+    "W_PAR_N01",
+    "W_PAR_N02",
+    "W_PAR_N03",
+    "W_PAR_S",
+    "W_PAR_SE",
+    "W_PAR_SW"
+   ],
+   "textures": {
+    "baseColor": "textures/render_basecolor.jpg",
+    "normal": "textures/render_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/render_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 2.0
+  },
+  "column_finish": {
+   "category": "Concrete",
+   "name_zh": "結構柱微水泥",
+   "name_en": "Microcement on RC column",
+   "gltf_material_index": 2,
+   "pbr": {
+    "baseColor_srgb": "#ded8ce",
+    "roughness": 0.75,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "COL_01",
+    "COL_02",
+    "COL_03",
+    "COL_04"
+   ],
+   "textures": {
+    "baseColor": null,
+    "normal": "textures/microcement_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/microcement_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 2.0
+  },
+  "joinery_paint": {
+   "category": "Painted Surface",
+   "name_zh": "烤漆櫃體（暖白）",
+   "name_en": "2-pac satin lacquer, warm white",
+   "gltf_material_index": 18,
+   "pbr": {
+    "baseColor_srgb": "#e8e4dc",
+    "roughness": 0.45,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "CAB_KIT_BASE",
+    "CAB_KIT_UPPER",
+    "CAB_STORE_E",
+    "CAB_STORE_N",
+    "CAB_STORE_S",
+    "FIN_R01_ENTRY_SKIRTING",
+    "FIN_R02_STORE_SKIRTING",
+    "FIN_R03_DINING_SKIRTING",
+    "FIN_R04_KITCHEN_SKIRTING",
+    "FIN_R05_LIVING_SKIRTING",
+    "FIN_R06_HALL_SKIRTING",
+    "FIN_R07_PLAY_SKIRTING",
+    "FIN_R10_KIDS_SKIRTING",
+    "FIN_R11_STUDY_SKIRTING",
+    "FIN_R12_CLOSET_SKIRTING",
+    "FIN_R14_MASTER_SKIRTING",
+    "FIX_BATH1_WC",
+    "FIX_BATH2_WC",
+    "FIX_MBATH_WC"
+   ]
+  },
+  "door_paint": {
+   "category": "Painted Surface",
+   "name_zh": "烤漆門片",
+   "name_en": "Lacquered door leaf",
+   "gltf_material_index": 8,
+   "pbr": {
+    "baseColor_srgb": "#e4e0d8",
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "D04_BACK_LEAF"
+   ]
+  },
+  "floor_oak": {
+   "category": "Natural Timber",
+   "name_zh": "歐洲橡木超寬地板 190mm（自然油）",
+   "name_en": "European oak 190 mm plank, natural oil",
+   "gltf_material_index": 11,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.55,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FLR_R01_ENTRY",
+    "FLR_R02_STORE",
+    "FLR_R03_DINING",
+    "FLR_R05_LIVING",
+    "FLR_R06_HALL",
+    "FLR_R07_PLAY",
+    "FLR_R10_KIDS",
+    "FLR_R11_STUDY",
+    "FLR_R12_CLOSET",
+    "FLR_R14_MASTER"
+   ],
+   "textures": {
+    "baseColor": "textures/oak_floor_basecolor.jpg",
+    "normal": "textures/oak_floor_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/oak_floor_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.9
+  },
+  "joinery_oak": {
+   "category": "Natural Timber",
+   "name_zh": "橡木皮櫃體",
+   "name_en": "Oak veneer joinery",
+   "gltf_material_index": 7,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "CAB_APPLIANCE",
+    "CAB_CAT",
+    "CAB_ENTRY_COAT",
+    "CAB_ENTRY_SHOE",
+    "CAB_FRIDGE_TOP",
+    "CAB_KIDS_BOOK",
+    "CAB_KIDS_WARDROBE",
+    "CAB_PLAY_KIDS",
+    "CAB_PLAY_OPEN",
+    "CAB_ROBE_N",
+    "CAB_ROBE_W",
+    "CAB_TV",
+    "CAB_W_DISPLAY",
+    "CAB_W_SIDE",
+    "CAB_W_STORE1",
+    "CAB_W_STORE2",
+    "CAB_W_STORE3",
+    "D03_COAT_LEAF",
+    "FIX_BATH1_VANITY",
+    "FIX_BATH2_VANITY",
+    "FIX_MBATH_VANITY",
+    "FUR_ISLAND",
+    "FUR_KIDS_DESK",
+    "FUR_PLAY_TABLE",
+    "FUR_ROBE_VANITY"
+   ],
+   "textures": {
+    "baseColor": "textures/oak_veneer_basecolor.jpg",
+    "normal": "textures/oak_veneer_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/oak_veneer_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.2
+  },
+  "joinery_walnut": {
+   "category": "Natural Timber",
+   "name_zh": "胡桃木皮（煙燻）",
+   "name_en": "Smoked walnut veneer",
+   "gltf_material_index": 20,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.45,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "CAB_MASTER_HEAD",
+    "CAB_STUDY_BOOK",
+    "CAB_TV",
+    "CAB_W_SHELF",
+    "FUR_DINING_CHAIR_1",
+    "FUR_DINING_CHAIR_2",
+    "FUR_DINING_CHAIR_3",
+    "FUR_DINING_CHAIR_4",
+    "FUR_KIDS_CHAIR",
+    "FUR_LOUNGE_1",
+    "FUR_LOUNGE_2",
+    "FUR_STUDY_DESKCHAIR",
+    "FUR_TEA_CHAIR_1",
+    "FUR_TEA_CHAIR_2"
+   ],
+   "textures": {
+    "baseColor": "textures/walnut_veneer_basecolor.jpg",
+    "normal": "textures/walnut_veneer_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/walnut_veneer_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.2
+  },
+  "timber_oak_solid": {
+   "category": "Natural Timber",
+   "name_zh": "實木橡木",
+   "name_en": "Solid oak",
+   "gltf_material_index": 22,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "DEC_PLANT_BAL_1",
+    "DEC_PLANT_BAL_2",
+    "DEC_PLANT_BAL_3",
+    "DEC_PLANT_BAL_4",
+    "FUR_DINING_TABLE",
+    "FUR_STUDY_DESK",
+    "FUR_TEA_TABLE"
+   ],
+   "textures": {
+    "baseColor": "textures/oak_solid_basecolor.jpg",
+    "normal": "textures/oak_solid_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/oak_solid_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.0
+  },
+  "door_oak": {
+   "category": "Natural Timber",
+   "name_zh": "橡木皮門片",
+   "name_en": "Oak veneer door",
+   "gltf_material_index": 6,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "D02_STORE_LEAF",
+    "D05_BATH1_LEAF",
+    "D06_BATH2_LEAF",
+    "D07_KIDS_LEAF",
+    "D08_MASTER_LEAF",
+    "D09_MBATH_LEAF"
+   ],
+   "textures": {
+    "baseColor": "textures/oak_veneer_basecolor.jpg",
+    "normal": "textures/oak_veneer_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/oak_veneer_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.2
+  },
+  "door_walnut": {
+   "category": "Natural Timber",
+   "name_zh": "胡桃木大門",
+   "name_en": "Walnut entry door",
+   "gltf_material_index": 3,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.45,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "D01_MAIN_LEAF",
+    "D01_MAIN_LEAF_B"
+   ],
+   "textures": {
+    "baseColor": "textures/walnut_veneer_basecolor.jpg",
+    "normal": "textures/walnut_veneer_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/walnut_veneer_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.2
+  },
+  "door_frame": {
+   "category": "Natural Timber",
+   "name_zh": "橡木門框",
+   "name_en": "Oak door frame",
+   "gltf_material_index": 5,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "D01_MAIN_FRAME",
+    "D02_STORE_FRAME",
+    "D04_BACK_FRAME",
+    "D05_BATH1_FRAME",
+    "D06_BATH2_FRAME",
+    "D07_KIDS_FRAME",
+    "D08_MASTER_FRAME",
+    "D09_MBATH_FRAME"
+   ],
+   "textures": {
+    "baseColor": "textures/oak_veneer_basecolor.jpg",
+    "normal": "textures/oak_veneer_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/oak_veneer_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.2
+  },
+  "stone_travertine": {
+   "category": "Natural Stone",
+   "name_zh": "米白洞石（填孔霧面）",
+   "name_en": "Filled honed travertine",
+   "gltf_material_index": 23,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.42,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FIX_BATH1_VANITY",
+    "FIX_BATH2_VANITY",
+    "FIX_MBATH_VANITY",
+    "FUR_COFFEE_1",
+    "FUR_COFFEE_2",
+    "FUR_ISLAND",
+    "FUR_MASTER_NIGHT_1",
+    "FUR_MASTER_NIGHT_2",
+    "FUR_ROBE_VANITY"
+   ],
+   "textures": {
+    "baseColor": "textures/travertine_basecolor.jpg",
+    "normal": "textures/travertine_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/travertine_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.2
+  },
+  "stone_quartzite": {
+   "category": "Natural Stone",
+   "name_zh": "白色石英岩檯面",
+   "name_en": "White quartzite benchtop",
+   "gltf_material_index": 24,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.3,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "CAB_KIT_BASE"
+   ],
+   "textures": {
+    "baseColor": "textures/quartzite_basecolor.jpg",
+    "normal": "textures/quartzite_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/quartzite_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.6
+  },
+  "floor_stone": {
+   "category": "Natural Stone",
+   "name_zh": "石材地坪（廚房／門檻）",
+   "name_en": "Honed limestone floor",
+   "gltf_material_index": 13,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "EXT_CORRIDOR",
+    "FLR_R04_KITCHEN",
+    "THR_D01_MAIN",
+    "THR_D02_STORE",
+    "THR_D04_BACK",
+    "THR_D05_BATH1",
+    "THR_D06_BATH2",
+    "THR_D07_KIDS",
+    "THR_D08_MASTER",
+    "THR_D09_MBATH",
+    "THR_P01_ROBE",
+    "THR_SD01_KITCHEN_W",
+    "THR_SD02_KITCHEN_S",
+    "THR_SD03_PLAY_N",
+    "THR_SD04_PLAY_W",
+    "THR_SD05_LIVING_S",
+    "THR_SD06_PLAY_S",
+    "THR_SD07_MASTER_S",
+    "THR_SD08_STUDY_E"
+   ],
+   "textures": {
+    "baseColor": "textures/stone_floor_basecolor.jpg",
+    "normal": "textures/stone_floor_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/stone_floor_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.2
+  },
+  "floor_paver": {
+   "category": "Natural Stone",
+   "name_zh": "戶外石英磚 600×600",
+   "name_en": "Outdoor porcelain paver 600×600",
+   "gltf_material_index": 15,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.7,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FLR_B01_BAL_N",
+    "FLR_B02_AC",
+    "FLR_B03_BAL_SW",
+    "FLR_B04_BAL_S",
+    "FLR_B05_BAL_SE",
+    "FLR_B06_BAL_E"
+   ],
+   "textures": {
+    "baseColor": "textures/paver_basecolor.jpg",
+    "normal": "textures/paver_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/paver_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 1.2
+  },
+  "microcement": {
+   "category": "Concrete",
+   "name_zh": "微水泥牆面",
+   "name_en": "Microcement wall",
+   "gltf_material_index": 39,
+   "pbr": {
+    "baseColor_srgb": "#d6ccbe",
+    "roughness": 0.62,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FIN_R08_BATH1_LINING",
+    "FIN_R09_BATH2_LINING",
+    "FIN_R13_MBATH_LINING"
+   ],
+   "textures": {
+    "baseColor": "textures/microcement_basecolor.jpg",
+    "normal": "textures/microcement_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/microcement_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 2.0
+  },
+  "floor_microcement": {
+   "category": "Concrete",
+   "name_zh": "微水泥地坪",
+   "name_en": "Microcement floor",
+   "gltf_material_index": 14,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.6,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FLR_R08_BATH1",
+    "FLR_R09_BATH2",
+    "FLR_R13_MBATH"
+   ],
+   "textures": {
+    "baseColor": "textures/microcement_floor_basecolor.jpg",
+    "normal": "textures/microcement_floor_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/microcement_floor_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 2.0
+  },
+  "glass_clear": {
+   "category": "Glass",
+   "name_zh": "超白清玻璃",
+   "name_en": "Low-iron clear glass",
+   "gltf_material_index": 9,
+   "pbr": {
+    "baseColor_srgb": "#ebf2f4",
+    "roughness": 0.04,
+    "metalness": 0.0,
+    "opacity": 0.16,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FIX_BATH1_SCREEN",
+    "FIX_BATH2_SCREEN",
+    "SD01_KITCHEN_W",
+    "SD02_KITCHEN_S",
+    "SD05_LIVING_S",
+    "SD06_PLAY_S",
+    "SD07_MASTER_S",
+    "SD08_STUDY_E",
+    "WN01_UTIL",
+    "WN02_BATH1",
+    "WN03_KIDS",
+    "WN04_MASTER_E",
+    "WN05_MBATH"
+   ]
+  },
+  "glass_fluted": {
+   "category": "Glass",
+   "name_zh": "長虹玻璃",
+   "name_en": "Fluted glass",
+   "gltf_material_index": 10,
+   "pbr": {
+    "baseColor_srgb": "#f0f4f4",
+    "roughness": 0.12,
+    "metalness": 0.0,
+    "opacity": 0.5,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "SD03_PLAY_N",
+    "SD04_PLAY_W"
+   ],
+   "textures": {
+    "baseColor": null,
+    "normal": "textures/fluted_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/fluted_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 0.4
+  },
+  "glass_lacquer": {
+   "category": "Glass",
+   "name_zh": "烤漆玻璃（暖灰）",
+   "name_en": "Back-painted glass, warm greige",
+   "gltf_material_index": 19,
+   "pbr": {
+    "baseColor_srgb": "#cec6ba",
+    "roughness": 0.06,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FIN_DINING_GLASS"
+   ]
+  },
+  "glass_opal": {
+   "category": "Glass",
+   "name_zh": "乳白玻璃燈罩",
+   "name_en": "Opal glass shade",
+   "gltf_material_index": 38,
+   "pbr": {
+    "baseColor_srgb": "#faf8f2",
+    "roughness": 0.3,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": [
+     1.0,
+     0.88,
+     0.72
+    ],
+    "emissiveStrength": 2.0
+   },
+   "used_by": [
+    "LGT_ISLAND_PENDANT_1",
+    "LGT_ISLAND_PENDANT_2"
+   ]
+  },
+  "mirror": {
+   "category": "Glass",
+   "name_zh": "明鏡",
+   "name_en": "Mirror",
+   "gltf_material_index": 32,
+   "pbr": {
+    "baseColor_srgb": "#ced4d6",
+    "roughness": 0.1,
+    "metalness": 0.85,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FIX_BATH1_VANITY_MIRROR",
+    "FIX_BATH2_VANITY_MIRROR",
+    "FIX_MBATH_VANITY_MIRROR",
+    "FIX_ROBE_MIRROR"
+   ]
+  },
+  "water": {
+   "category": "Glass",
+   "name_zh": "水面",
+   "name_en": "Water",
+   "gltf_material_index": 31,
+   "pbr": {
+    "baseColor_srgb": "#b4cdd2",
+    "roughness": 0.02,
+    "metalness": 0.0,
+    "opacity": 0.45,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FIX_BATH1_TUB",
+    "FIX_BATH2_TUB",
+    "FIX_MBATH_TUB"
+   ]
+  },
+  "metal_black": {
+   "category": "Metal",
+   "name_zh": "黑色粉體烤漆鋁",
+   "name_en": "Black powder-coated aluminium",
+   "gltf_material_index": 4,
+   "pbr": {
+    "baseColor_srgb": "#201f1e",
+    "roughness": 0.45,
+    "metalness": 0.6,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "CAB_APPLIANCE",
+    "CAB_CAT",
+    "CAB_ENTRY_SHOE",
+    "CAB_KIDS_WARDROBE",
+    "CAB_KIT_BASE",
+    "CAB_ROBE_N",
+    "CAB_ROBE_W",
+    "CAB_W_DISPLAY",
+    "CAB_W_SIDE",
+    "CAB_W_STORE1",
+    "CAB_W_STORE2",
+    "CAB_W_STORE3",
+    "D01_MAIN_LEAF",
+    "D01_MAIN_LEAF_B",
+    "D02_STORE_LEAF",
+    "D03_COAT_LEAF",
+    "D04_BACK_LEAF",
+    "D05_BATH1_LEAF",
+    "D06_BATH2_LEAF",
+    "D07_KIDS_LEAF",
+    "D08_MASTER_LEAF",
+    "D09_MBATH_LEAF",
+    "FIX_KIT_HOB",
+    "FIX_KIT_SINK",
+    "FUR_ENTRY_BENCH",
+    "FUR_ISLAND",
+    "FUR_ISLAND_STOOL_1",
+    "FUR_ISLAND_STOOL_2",
+    "FUR_KIDS_BED",
+    "FUR_MASTER_BED",
+    "FUR_MASTER_BENCH",
+    "FUR_SOFA",
+    "FUR_STUDY_CHAIR",
+    "FUR_STUDY_DESK",
+    "LGT_DINING_PENDANT",
+    "LGT_ENTRY_SCONCE",
+    "LGT_ISLAND_PENDANT_1",
+    "LGT_ISLAND_PENDANT_2",
+    "LGT_STUDY_FLOORLAMP",
+    "SD01_KITCHEN_W",
+    "SD02_KITCHEN_S",
+    "SD03_PLAY_N",
+    "SD04_PLAY_W",
+    "SD05_LIVING_S",
+    "SD06_PLAY_S",
+    "SD07_MASTER_S",
+    "SD08_STUDY_E",
+    "WN01_UTIL",
+    "WN02_BATH1",
+    "WN03_KIDS",
+    "WN04_MASTER_E",
+    "WN05_MBATH"
+   ]
+  },
+  "metal_brushed": {
+   "category": "Metal",
+   "name_zh": "髮絲紋不鏽鋼",
+   "name_en": "Brushed stainless steel",
+   "gltf_material_index": 25,
+   "pbr": {
+    "baseColor_srgb": "#c4c4c2",
+    "roughness": 0.32,
+    "metalness": 1.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "CAB_KIT_UPPER",
+    "FIX_AC_GRILLE",
+    "FIX_BATH1_WC",
+    "FIX_BATH2_WC",
+    "FIX_FRIDGE",
+    "FIX_KIT_SINK",
+    "FIX_MBATH_WC"
+   ]
+  },
+  "metal_white": {
+   "category": "Metal",
+   "name_zh": "白色烤漆金屬",
+   "name_en": "White powder-coat",
+   "gltf_material_index": 35,
+   "pbr": {
+    "baseColor_srgb": "#ececea",
+    "roughness": 0.5,
+    "metalness": 0.1,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FIX_AC_ODU_1",
+    "FIX_AC_ODU_2",
+    "LGT_BATH1_DL1",
+    "LGT_BATH1_DL2",
+    "LGT_BATH2_DL1",
+    "LGT_BATH2_DL2",
+    "LGT_CLOSET_DL1",
+    "LGT_CLOSET_DL2",
+    "LGT_DINING_DL1",
+    "LGT_DINING_DL2",
+    "LGT_DINING_DL3",
+    "LGT_DINING_DL4",
+    "LGT_DINING_DL5",
+    "LGT_ENTRY_DL1",
+    "LGT_ENTRY_DL2",
+    "LGT_HALL_DL1",
+    "LGT_HALL_DL2",
+    "LGT_HALL_DL3",
+    "LGT_HALL_DL4",
+    "LGT_KIDS_DL1",
+    "LGT_KIDS_DL2",
+    "LGT_KIDS_DL3",
+    "LGT_KITCHEN_DL1",
+    "LGT_KITCHEN_DL2",
+    "LGT_KITCHEN_DL3",
+    "LGT_KITCHEN_DL4",
+    "LGT_LIVING_DL1",
+    "LGT_LIVING_DL2",
+    "LGT_LIVING_DL3",
+    "LGT_LIVING_DL4",
+    "LGT_LIVING_DL5",
+    "LGT_LIVING_DL6",
+    "LGT_MASTER_DL1",
+    "LGT_MASTER_DL2",
+    "LGT_MASTER_DL3",
+    "LGT_MASTER_DL4",
+    "LGT_MBATH_DL1",
+    "LGT_MBATH_DL2",
+    "LGT_MBATH_DL3",
+    "LGT_PLAY_DL1",
+    "LGT_PLAY_DL2",
+    "LGT_PLAY_DL3",
+    "LGT_STORE_DL1",
+    "LGT_STUDY_DL1",
+    "LGT_STUDY_DL2",
+    "LGT_STUDY_DL3"
+   ]
+  },
+  "screen_black": {
+   "category": "Metal",
+   "name_zh": "黑玻璃（電視/爐面）",
+   "name_en": "Black glass",
+   "gltf_material_index": 21,
+   "pbr": {
+    "baseColor_srgb": "#0e0e10",
+    "roughness": 0.15,
+    "metalness": 0.2,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FIX_KIT_HOB",
+    "FIX_TV"
+   ]
+  },
+  "fabric_boucle": {
+   "category": "Fabric",
+   "name_zh": "羊毛圈圈紗（燕麥色）",
+   "name_en": "Oat bouclé",
+   "gltf_material_index": 26,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.95,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FUR_KIDS_BED",
+    "FUR_LOUNGE_1",
+    "FUR_LOUNGE_2",
+    "FUR_MASTER_BED",
+    "FUR_MASTER_BENCH",
+    "FUR_ROBE_STOOL",
+    "FUR_SOFA",
+    "FUR_STUDY_CHAIR"
+   ],
+   "textures": {
+    "baseColor": "textures/boucle_basecolor.jpg",
+    "normal": "textures/boucle_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/boucle_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 0.35
+  },
+  "fabric_linen": {
+   "category": "Fabric",
+   "name_zh": "亞麻布（沙色）",
+   "name_en": "Sand linen",
+   "gltf_material_index": 27,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.92,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FUR_KIDS_BED",
+    "FUR_KIDS_CHAIR",
+    "FUR_MASTER_BED",
+    "FUR_SOFA",
+    "FUR_STUDY_CHAIR",
+    "FUR_TEA_CHAIR_1",
+    "FUR_TEA_CHAIR_2"
+   ],
+   "textures": {
+    "baseColor": "textures/linen_basecolor.jpg",
+    "normal": "textures/linen_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/linen_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 0.3
+  },
+  "fabric_white": {
+   "category": "Fabric",
+   "name_zh": "白色亞麻寢具",
+   "name_en": "White linen bedding",
+   "gltf_material_index": 34,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.92,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FUR_KIDS_BED",
+    "FUR_MASTER_BED",
+    "FUR_MASTER_NIGHT_1",
+    "FUR_MASTER_NIGHT_2",
+    "LGT_STUDY_FLOORLAMP"
+   ],
+   "textures": {
+    "baseColor": "textures/linen_white_basecolor.jpg",
+    "normal": "textures/linen_white_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/linen_white_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 0.3
+  },
+  "rug_wool": {
+   "category": "Fabric",
+   "name_zh": "羊毛手織地毯",
+   "name_en": "Hand-loomed wool rug",
+   "gltf_material_index": 28,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.98,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "DEC_RUG_LIVING",
+    "DEC_RUG_MASTER",
+    "DEC_RUG_PLAY"
+   ],
+   "textures": {
+    "baseColor": "textures/rug_wool_basecolor.jpg",
+    "normal": "textures/rug_wool_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/rug_wool_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 0.8
+  },
+  "leather_tan": {
+   "category": "Leather",
+   "name_zh": "植鞣皮（駝色）",
+   "name_en": "Tan vegetable-tanned leather",
+   "gltf_material_index": 17,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FUR_DINING_CHAIR_1",
+    "FUR_DINING_CHAIR_2",
+    "FUR_DINING_CHAIR_3",
+    "FUR_DINING_CHAIR_4",
+    "FUR_ENTRY_BENCH",
+    "FUR_ISLAND_STOOL_1",
+    "FUR_ISLAND_STOOL_2",
+    "FUR_LOUNGE_1",
+    "FUR_LOUNGE_2",
+    "FUR_STUDY_DESKCHAIR"
+   ],
+   "textures": {
+    "baseColor": "textures/leather_tan_basecolor.jpg",
+    "normal": "textures/leather_tan_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/leather_tan_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 0.6
+  },
+  "leather_dark": {
+   "category": "Leather",
+   "name_zh": "深咖啡皮革",
+   "name_en": "Espresso leather",
+   "gltf_material_index": 29,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "FUR_MASSAGE"
+   ],
+   "textures": {
+    "baseColor": "textures/leather_dark_basecolor.jpg",
+    "normal": "textures/leather_dark_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/leather_dark_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 0.6
+  },
+  "ceramic_white": {
+   "category": "Ceramic",
+   "name_zh": "白色衛浴陶瓷",
+   "name_en": "Vitreous china, gloss white",
+   "gltf_material_index": 30,
+   "pbr": {
+    "baseColor_srgb": "#f6f6f4",
+    "roughness": 0.12,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "DEC_PLANT_IN_1",
+    "DEC_PLANT_IN_2",
+    "FIX_BATH1_TUB",
+    "FIX_BATH1_VANITY",
+    "FIX_BATH1_WC",
+    "FIX_BATH2_TUB",
+    "FIX_BATH2_VANITY",
+    "FIX_BATH2_WC",
+    "FIX_MBATH_TUB",
+    "FIX_MBATH_VANITY",
+    "FIX_MBATH_WC",
+    "FUR_MASTER_NIGHT_1",
+    "FUR_MASTER_NIGHT_2"
+   ]
+  },
+  "ceramic_terracotta": {
+   "category": "Ceramic",
+   "name_zh": "陶盆",
+   "name_en": "Terracotta planter",
+   "gltf_material_index": 36,
+   "pbr": {
+    "baseColor_srgb": "#b06e4e",
+    "roughness": 0.85,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "DEC_PLANT_BAL_1",
+    "DEC_PLANT_BAL_2",
+    "DEC_PLANT_BAL_3",
+    "DEC_PLANT_BAL_4"
+   ]
+  },
+  "plant_green": {
+   "category": "Organic",
+   "name_zh": "植栽",
+   "name_en": "Foliage",
+   "gltf_material_index": 37,
+   "pbr": {
+    "baseColor_srgb": null,
+    "roughness": 0.75,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "DEC_PLANT_BAL_1",
+    "DEC_PLANT_BAL_2",
+    "DEC_PLANT_BAL_3",
+    "DEC_PLANT_BAL_4",
+    "DEC_PLANT_IN_1",
+    "DEC_PLANT_IN_2"
+   ],
+   "textures": {
+    "baseColor": "textures/foliage_basecolor.jpg",
+    "normal": "textures/foliage_normal.jpg",
+    "occlusionRoughnessMetallic": "textures/foliage_orm.jpg",
+    "note": "procedural, seamless; UVs are world-scale (1 UV unit = tile_m metres)"
+   },
+   "tile_m": 0.5
+  },
+  "shadow": {
+   "category": "Painted Surface",
+   "name_zh": "分割縫（陰影）",
+   "name_en": "Shadow-line reveal",
+   "gltf_material_index": 16,
+   "pbr": {
+    "baseColor_srgb": "#2c2824",
+    "roughness": 1.0,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": null,
+    "emissiveStrength": null
+   },
+   "used_by": [
+    "CAB_APPLIANCE",
+    "CAB_CAT",
+    "CAB_ENTRY_SHOE",
+    "CAB_KIDS_WARDROBE",
+    "CAB_KIT_BASE",
+    "CAB_ROBE_N",
+    "CAB_ROBE_W",
+    "CAB_W_DISPLAY",
+    "CAB_W_STORE2",
+    "CAB_W_STORE3",
+    "FIX_FRIDGE",
+    "FIX_KIT_SINK"
+   ]
+  },
+  "emissive_warm": {
+   "category": "Lighting",
+   "name_zh": "燈具發光面 2700–3000K",
+   "name_en": "Light emitter 2700–3000K",
+   "gltf_material_index": 33,
+   "pbr": {
+    "baseColor_srgb": "#fff4e4",
+    "roughness": 0.5,
+    "metalness": 0.0,
+    "opacity": 1.0,
+    "emissive": [
+     1.0,
+     0.86,
+     0.68
+    ],
+    "emissiveStrength": 6.0
+   },
+   "used_by": [
+    "CAB_MASTER_HEAD",
+    "FIX_BATH1_VANITY_MIRROR",
+    "FIX_BATH2_VANITY_MIRROR",
+    "FIX_MBATH_VANITY_MIRROR",
+    "LGT_BATH1_DL1",
+    "LGT_BATH1_DL2",
+    "LGT_BATH2_DL1",
+    "LGT_BATH2_DL2",
+    "LGT_CLOSET_DL1",
+    "LGT_CLOSET_DL2",
+    "LGT_DINING_DL1",
+    "LGT_DINING_DL2",
+    "LGT_DINING_DL3",
+    "LGT_DINING_DL4",
+    "LGT_DINING_DL5",
+    "LGT_DINING_PENDANT",
+    "LGT_ENTRY_DL1",
+    "LGT_ENTRY_DL2",
+    "LGT_ENTRY_SCONCE",
+    "LGT_HALL_DL1",
+    "LGT_HALL_DL2",
+    "LGT_HALL_DL3",
+    "LGT_HALL_DL4",
+    "LGT_KIDS_DL1",
+    "LGT_KIDS_DL2",
+    "LGT_KIDS_DL3",
+    "LGT_KITCHEN_DL1",
+    "LGT_KITCHEN_DL2",
+    "LGT_KITCHEN_DL3",
+    "LGT_KITCHEN_DL4",
+    "LGT_LIVING_COVE",
+    "LGT_LIVING_DL1",
+    "LGT_LIVING_DL2",
+    "LGT_LIVING_DL3",
+    "LGT_LIVING_DL4",
+    "LGT_LIVING_DL5",
+    "LGT_LIVING_DL6",
+    "LGT_MASTER_DL1",
+    "LGT_MASTER_DL2",
+    "LGT_MASTER_DL3",
+    "LGT_MASTER_DL4",
+    "LGT_MBATH_DL1",
+    "LGT_MBATH_DL2",
+    "LGT_MBATH_DL3",
+    "LGT_PLAY_DL1",
+    "LGT_PLAY_DL2",
+    "LGT_PLAY_DL3",
+    "LGT_STORE_DL1",
+    "LGT_STUDY_DL1",
+    "LGT_STUDY_DL2",
+    "LGT_STUDY_DL3",
+    "LGT_STUDY_FLOORLAMP"
+   ]
+  }
+ }
+}

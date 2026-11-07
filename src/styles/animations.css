@@ -1,0 +1,10 @@
+.fade-enter { animation: fadeIn 1.4s var(--ease) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.index-menu { animation: fadeIn 0.5s var(--ease) both; }
+.pick { animation: fadeIn 0.35s var(--ease) both; }
+.stage canvas { transition: opacity 0.45s var(--ease); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  .scroll-cue .rail::after { display: none; }
+}

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+reports/
+*.log
+*.tmp
+*.tmp.glb
+*.opt.glb
+.DS_Store
+Thumbs.db
+.env
+.env.*
+.vite/
+*.zip

@@ -1,0 +1,38 @@
+/* Wu Residence — editorial dark ground with bone-white type, timber accent.
+   Layout: one fixed WebGL stage; every UI layer floats over it on hairline rules; a tall spacer drives the film. */
+:root {
+  --ink: #121211;          /* stage / night */
+  --ink-2: #1b1a18;
+  --bone: #ece6dc;         /* type, paper */
+  --bone-dim: rgba(236, 230, 220, 0.64);
+  --bone-faint: rgba(236, 230, 220, 0.38);
+  --stone: #a69d90;        /* warm grey */
+  --oak: #c19463;          /* timber accent */
+  --line: rgba(236, 230, 220, 0.2);
+  --scrim: rgba(14, 13, 12, 0.62);
+
+  --f-display: 'Italiana', 'Didot', 'Bodoni 72', 'Times New Roman', serif;
+  --f-ui: 'Jost', 'Futura', 'Avenir Next', 'Helvetica Neue', system-ui, sans-serif;
+
+  --step--1: clamp(0.68rem, 0.64rem + 0.15vw, 0.76rem);
+  --step-0: clamp(0.88rem, 0.84rem + 0.2vw, 1rem);
+  --step-1: clamp(1.1rem, 1rem + 0.45vw, 1.35rem);
+  --step-3: clamp(2rem, 1.4rem + 2.6vw, 3.6rem);
+  --step-5: clamp(2.7rem, 1.6rem + 4.8vw, 6.4rem);
+
+  --gut: max(24px, env(safe-area-inset-left, 0px));
+  --gut-r: max(24px, env(safe-area-inset-right, 0px));
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--ink); color: var(--bone); font-family: var(--f-ui); font-size: var(--step-0); font-weight: 300; -webkit-font-smoothing: antialiased; }
+html.is-locked, html.is-locked body { overflow: hidden; touch-action: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 1px solid var(--oak); outline-offset: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.label { font-size: var(--step--1); letter-spacing: 0.22em; text-transform: uppercase; font-weight: 400; }
+.num { font-variant-numeric: tabular-nums lining-nums; }
+.display { font-family: var(--f-display); font-weight: 400; letter-spacing: 0.01em; line-height: 0.98; text-wrap: balance; }

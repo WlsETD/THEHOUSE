@@ -1,0 +1,2501 @@
+{
+ "coordinate_system": {
+  "units": "metre",
+  "handedness": "right-handed",
+  "up": "+Y",
+  "x": "+X = east (drawing right)",
+  "z": "+Z = south (drawing down); north = -Z",
+  "origin": "centre of the overall plan bounding box (14,521 × 12,271 mm) at finished floor level (FFL ±0)",
+  "origin_plan_mm": [
+   7260.5,
+   0,
+   6135.5
+  ],
+  "plan_to_model": "x = (X_mm − 7260.5)/1000 ; y = Y_mm/1000 ; z = (Z_mm − 6135.5)/1000",
+  "model_to_plan": "X_mm = x·1000 + 7260.5 ; Y_mm = y·1000 ; Z_mm = z·1000 + 6135.5",
+  "threejs": "Load scene.glb with GLTFLoader; no axis conversion required (glTF is +Y up, metres)."
+ },
+ "rooms": [
+  {
+   "id": "R01_ENTRY",
+   "name_zh": "玄關",
+   "name_en": "Entry Foyer",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     150,
+     585
+    ],
+    [
+     1750,
+     585
+    ],
+    [
+     1750,
+     1949
+    ],
+    [
+     2449,
+     1949
+    ],
+    [
+     2449,
+     2549
+    ],
+    [
+     1750,
+     2549
+    ],
+    [
+     1750,
+     2669
+    ],
+    [
+     150,
+     2669
+    ]
+   ],
+   "polygon_m": [
+    [
+     -7.1105,
+     -5.5505
+    ],
+    [
+     -5.5105,
+     -5.5505
+    ],
+    [
+     -5.5105,
+     -4.1865
+    ],
+    [
+     -4.8115,
+     -4.1865
+    ],
+    [
+     -4.8115,
+     -3.5865
+    ],
+    [
+     -5.5105,
+     -3.5865
+    ],
+    [
+     -5.5105,
+     -3.4665
+    ],
+    [
+     -7.1105,
+     -3.4665
+    ]
+   ],
+   "area_m2": 3.75,
+   "area_ping": 1.14,
+   "centroid_m": [
+    -6.3105,
+    -4.8685
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "D01_MAIN",
+     "type": "swing_door",
+     "connects_to": "EXT_CORRIDOR",
+     "position_m": [
+      -7.1855,
+      -4.391
+     ],
+     "clear_width_mm": 1439
+    },
+    {
+     "opening": "D02_STORE",
+     "type": "swing_door",
+     "connects_to": "R02_STORE",
+     "position_m": [
+      -5.461,
+      -4.6465
+     ],
+     "clear_width_mm": 722
+    },
+    {
+     "opening": "D03_COAT",
+     "type": "swing_door",
+     "connects_to": "exterior",
+     "position_m": [
+      -5.5005,
+      -3.8865
+     ],
+     "clear_width_mm": 600
+    },
+    {
+     "opening": null,
+     "type": "open_plan",
+     "connects_to": "R03_DINING"
+    }
+   ],
+   "camera": {
+    "position_m": [
+     -6.1105,
+     1.6,
+     -1.7355
+    ],
+    "target_m": [
+     -6.4105,
+     1.15,
+     -5.4355
+    ],
+    "fov": 58
+   },
+   "best_view": "CAM_R01_ENTRY",
+   "intro_zh": "西側主入口，1600 mm 鞋櫃與獨立衣帽間收整進門動線。",
+   "intro_en": "Main entry on the west facade; 1600 mm shoe cabinet and coat closet organise arrival.",
+   "objects": [
+    "FLR_R01_ENTRY",
+    "CEIL_R01_ENTRY",
+    "CAB_ENTRY_SHOE",
+    "CAB_ENTRY_COAT",
+    "FUR_ENTRY_BENCH",
+    "LGT_ENTRY_DL1",
+    "LGT_ENTRY_DL2",
+    "LGT_ENTRY_SCONCE",
+    "FIN_R01_ENTRY_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R02_STORE",
+   "name_zh": "儲藏室",
+   "name_en": "Storage Room",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     1849,
+     585
+    ],
+    [
+     4128,
+     585
+    ],
+    [
+     4128,
+     1545
+    ],
+    [
+     3420,
+     1545
+    ],
+    [
+     3420,
+     2549
+    ],
+    [
+     2549,
+     2549
+    ],
+    [
+     2549,
+     1850
+    ],
+    [
+     1849,
+     1850
+    ]
+   ],
+   "polygon_m": [
+    [
+     -5.4115,
+     -5.5505
+    ],
+    [
+     -3.1325,
+     -5.5505
+    ],
+    [
+     -3.1325,
+     -4.5905
+    ],
+    [
+     -3.8405,
+     -4.5905
+    ],
+    [
+     -3.8405,
+     -3.5865
+    ],
+    [
+     -4.7115,
+     -3.5865
+    ],
+    [
+     -4.7115,
+     -4.2855
+    ],
+    [
+     -5.4115,
+     -4.2855
+    ]
+   ],
+   "area_m2": 3.28,
+   "area_ping": 0.99,
+   "centroid_m": [
+    -4.626,
+    -4.438
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "D02_STORE",
+     "type": "swing_door",
+     "connects_to": "R01_ENTRY",
+     "position_m": [
+      -5.461,
+      -4.6465
+     ],
+     "clear_width_mm": 722
+    }
+   ],
+   "camera": {
+    "position_m": [
+     -4.0105,
+     1.55,
+     -3.7855
+    ],
+    "target_m": [
+     -4.9605,
+     1.1,
+     -5.4355
+    ],
+    "fov": 70
+   },
+   "best_view": "CAM_R02_STORE",
+   "intro_zh": "玄關旁步入式儲藏室，北側 300 mm 層架、東側 472 mm 深層架。",
+   "intro_en": "Walk-in storage off the foyer with 300 mm and 472 mm deep shelving.",
+   "objects": [
+    "FLR_R02_STORE",
+    "CEIL_R02_STORE",
+    "CAB_STORE_N",
+    "CAB_STORE_E",
+    "CAB_STORE_S",
+    "LGT_STORE_DL1",
+    "FIN_R02_STORE_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R03_DINING",
+   "name_zh": "餐廳",
+   "name_en": "Dining",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     150,
+     2669
+    ],
+    [
+     3540,
+     2669
+    ],
+    [
+     3540,
+     1645
+    ],
+    [
+     5198,
+     1645
+    ],
+    [
+     5198,
+     2669
+    ],
+    [
+     5163,
+     2669
+    ],
+    [
+     5163,
+     6018
+    ],
+    [
+     150,
+     6018
+    ]
+   ],
+   "polygon_m": [
+    [
+     -7.1105,
+     -3.4665
+    ],
+    [
+     -3.7205,
+     -3.4665
+    ],
+    [
+     -3.7205,
+     -4.4905
+    ],
+    [
+     -2.0625,
+     -4.4905
+    ],
+    [
+     -2.0625,
+     -3.4665
+    ],
+    [
+     -2.0975,
+     -3.4665
+    ],
+    [
+     -2.0975,
+     -0.1175
+    ],
+    [
+     -7.1105,
+     -0.1175
+    ]
+   ],
+   "area_m2": 18.49,
+   "area_ping": 5.59,
+   "centroid_m": [
+    -4.604,
+    -1.792
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "SD01_KITCHEN_W",
+     "type": "sliding_door",
+     "connects_to": "R04_KITCHEN",
+     "position_m": [
+      -2.0775,
+      -2.3195
+     ],
+     "clear_width_mm": 2294
+    },
+    {
+     "opening": null,
+     "type": "open_plan",
+     "connects_to": "R01_ENTRY"
+    },
+    {
+     "opening": null,
+     "type": "open_plan",
+     "connects_to": "R05_LIVING"
+    },
+    {
+     "opening": null,
+     "type": "open_plan",
+     "connects_to": "R06_HALL"
+    }
+   ],
+   "camera": {
+    "position_m": [
+     -2.3605,
+     1.65,
+     -0.3355
+    ],
+    "target_m": [
+     -5.6605,
+     1.0,
+     -2.8355
+    ],
+    "fov": 60
+   },
+   "best_view": "CAM_R03_DINING",
+   "intro_zh": "1500×1000 餐桌（72 cm 高）與 1540×1000 廚房中島（90 cm 高）構成社交核心。",
+   "intro_en": "1500×1000 dining table (720 h) and 1540×1000 island (900 h) form the social core.",
+   "objects": [
+    "FLR_R03_DINING",
+    "CEIL_R03_DINING",
+    "FIN_DINING_GLASS",
+    "CAB_W_SIDE",
+    "CAB_W_DISPLAY",
+    "CAB_W_STORE1",
+    "CAB_W_SHELF",
+    "FUR_DINING_TABLE",
+    "FUR_DINING_CHAIR_1",
+    "FUR_DINING_CHAIR_2",
+    "FUR_DINING_CHAIR_3",
+    "FUR_DINING_CHAIR_4",
+    "FUR_ISLAND",
+    "FUR_ISLAND_STOOL_1",
+    "FUR_ISLAND_STOOL_2",
+    "FIX_FRIDGE",
+    "CAB_FRIDGE_TOP",
+    "CAB_APPLIANCE",
+    "LGT_DINING_PENDANT",
+    "LGT_ISLAND_PENDANT_1",
+    "LGT_ISLAND_PENDANT_2",
+    "LGT_DINING_DL1",
+    "LGT_DINING_DL2",
+    "LGT_DINING_DL3",
+    "LGT_DINING_DL4",
+    "LGT_DINING_DL5",
+    "FIN_R03_DINING_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R04_KITCHEN",
+   "name_zh": "廚房",
+   "name_en": "Kitchen",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     5392,
+     565
+    ],
+    [
+     6698,
+     565
+    ],
+    [
+     6698,
+     4823
+    ],
+    [
+     5998,
+     4823
+    ],
+    [
+     5998,
+     4963
+    ],
+    [
+     5163,
+     4963
+    ],
+    [
+     5163,
+     2669
+    ],
+    [
+     5283,
+     2669
+    ],
+    [
+     5283,
+     1645
+    ],
+    [
+     5392,
+     1645
+    ]
+   ],
+   "polygon_m": [
+    [
+     -1.8685,
+     -5.5705
+    ],
+    [
+     -0.5625,
+     -5.5705
+    ],
+    [
+     -0.5625,
+     -1.3125
+    ],
+    [
+     -1.2625,
+     -1.3125
+    ],
+    [
+     -1.2625,
+     -1.1725
+    ],
+    [
+     -2.0975,
+     -1.1725
+    ],
+    [
+     -2.0975,
+     -3.4665
+    ],
+    [
+     -1.9775,
+     -3.4665
+    ],
+    [
+     -1.9775,
+     -4.4905
+    ],
+    [
+     -1.8685,
+     -4.4905
+    ]
+   ],
+   "area_m2": 6.28,
+   "area_ping": 1.9,
+   "centroid_m": [
+    -1.33,
+    -2.3895
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_stone",
+   "entries_exits": [
+    {
+     "opening": "D04_BACK",
+     "type": "swing_door",
+     "connects_to": "B01_BAL_N",
+     "position_m": [
+      -0.4875,
+      -5.108
+     ],
+     "clear_width_mm": 795
+    },
+    {
+     "opening": "SD01_KITCHEN_W",
+     "type": "sliding_door",
+     "connects_to": "R03_DINING",
+     "position_m": [
+      -2.0775,
+      -2.3195
+     ],
+     "clear_width_mm": 2294
+    },
+    {
+     "opening": "SD02_KITCHEN_S",
+     "type": "sliding_door",
+     "connects_to": "R06_HALL",
+     "position_m": [
+      -1.68,
+      -1.1525
+     ],
+     "clear_width_mm": 835
+    },
+    {
+     "opening": "WN01_UTIL",
+     "type": "window",
+     "connects_to": "exterior",
+     "position_m": [
+      -1.3905,
+      -5.638
+     ],
+     "clear_width_mm": 836
+    }
+   ],
+   "camera": {
+    "position_m": [
+     -1.5105,
+     1.65,
+     -1.4355
+    ],
+    "target_m": [
+     -0.9605,
+     1.1,
+     -4.6355
+    ],
+    "fov": 62
+   },
+   "best_view": "CAM_R04_KITCHEN",
+   "intro_zh": "3294 mm 一字型廚具，以玻璃橫拉門與餐廳區隔油煙；北端通往後陽台。",
+   "intro_en": "3294 mm galley run, enclosed by glass sliding doors; north end leads to the service balcony.",
+   "objects": [
+    "FLR_R04_KITCHEN",
+    "CEIL_R04_KITCHEN",
+    "CAB_KIT_BASE",
+    "CAB_KIT_UPPER",
+    "FIX_KIT_SINK",
+    "FIX_KIT_HOB",
+    "LGT_KITCHEN_DL1",
+    "LGT_KITCHEN_DL2",
+    "LGT_KITCHEN_DL3",
+    "LGT_KITCHEN_DL4",
+    "FIN_R04_KITCHEN_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R05_LIVING",
+   "name_zh": "客廳",
+   "name_en": "Living Room",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     150,
+     6018
+    ],
+    [
+     4721,
+     6018
+    ],
+    [
+     4721,
+     7148
+    ],
+    [
+     4611,
+     7148
+    ],
+    [
+     4611,
+     9562
+    ],
+    [
+     5060,
+     9562
+    ],
+    [
+     5060,
+     11062
+    ],
+    [
+     150,
+     11062
+    ]
+   ],
+   "polygon_m": [
+    [
+     -7.1105,
+     -0.1175
+    ],
+    [
+     -2.5395,
+     -0.1175
+    ],
+    [
+     -2.5395,
+     1.0125
+    ],
+    [
+     -2.6495,
+     1.0125
+    ],
+    [
+     -2.6495,
+     3.4265
+    ],
+    [
+     -2.2005,
+     3.4265
+    ],
+    [
+     -2.2005,
+     4.9265
+    ],
+    [
+     -7.1105,
+     4.9265
+    ]
+   ],
+   "area_m2": 23.3,
+   "area_ping": 7.05,
+   "centroid_m": [
+    -4.88,
+    2.2195
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "SD04_PLAY_W",
+     "type": "sliding_door",
+     "connects_to": "R07_PLAY",
+     "position_m": [
+      -2.5195,
+      0.4475
+     ],
+     "clear_width_mm": 1130
+    },
+    {
+     "opening": "SD05_LIVING_S",
+     "type": "sliding_door",
+     "connects_to": "B03_BAL_SW",
+     "position_m": [
+      -4.3895,
+      5.0015
+     ],
+     "clear_width_mm": 1980
+    },
+    {
+     "opening": null,
+     "type": "open_plan",
+     "connects_to": "R03_DINING"
+    }
+   ],
+   "camera": {
+    "position_m": [
+     -3.2605,
+     1.65,
+     4.7145
+    ],
+    "target_m": [
+     -6.7605,
+     1.15,
+     1.1645
+    ],
+    "fov": 60
+   },
+   "best_view": "CAM_R05_LIVING",
+   "intro_zh": "西牆 8.28 m 連續收納與電視櫃，2.4 m 沙發面向電視，南側落地窗通往陽台。",
+   "intro_en": "8.28 m continuous west-wall joinery with TV unit; 2.4 m sofa; full-height glazing to the south balcony.",
+   "objects": [
+    "FLR_R05_LIVING",
+    "CEIL_R05_LIVING",
+    "CAB_W_STORE2",
+    "CAB_TV",
+    "FIX_TV",
+    "CAB_W_STORE3",
+    "FUR_SOFA",
+    "FUR_COFFEE_1",
+    "FUR_COFFEE_2",
+    "FUR_LOUNGE_1",
+    "FUR_LOUNGE_2",
+    "FUR_TEA_TABLE",
+    "FUR_TEA_CHAIR_1",
+    "FUR_TEA_CHAIR_2",
+    "DEC_RUG_LIVING",
+    "CAB_CAT",
+    "DEC_PLANT_IN_1",
+    "LGT_LIVING_DL1",
+    "LGT_LIVING_DL2",
+    "LGT_LIVING_DL3",
+    "LGT_LIVING_DL4",
+    "LGT_LIVING_DL5",
+    "LGT_LIVING_DL6",
+    "LGT_LIVING_COVE",
+    "FIN_R05_LIVING_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R06_HALL",
+   "name_zh": "走道",
+   "name_en": "Hallway",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     5163,
+     4963
+    ],
+    [
+     9947,
+     4963
+    ],
+    [
+     9947,
+     6058
+    ],
+    [
+     5163,
+     6058
+    ]
+   ],
+   "polygon_m": [
+    [
+     -2.0975,
+     -1.1725
+    ],
+    [
+     2.6865,
+     -1.1725
+    ],
+    [
+     2.6865,
+     -0.0775
+    ],
+    [
+     -2.0975,
+     -0.0775
+    ]
+   ],
+   "area_m2": 5.24,
+   "area_ping": 1.58,
+   "centroid_m": [
+    0.2945,
+    -0.625
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "D06_BATH2",
+     "type": "swing_door",
+     "connects_to": "R09_BATH2",
+     "position_m": [
+      0.7765,
+      -1.2425
+     ],
+     "clear_width_mm": 858
+    },
+    {
+     "opening": "D07_KIDS",
+     "type": "swing_door",
+     "connects_to": "R10_KIDS",
+     "position_m": [
+      2.5005,
+      -1.242
+     ],
+     "clear_width_mm": 952
+    },
+    {
+     "opening": "SD02_KITCHEN_S",
+     "type": "sliding_door",
+     "connects_to": "R04_KITCHEN",
+     "position_m": [
+      -1.68,
+      -1.1525
+     ],
+     "clear_width_mm": 835
+    },
+    {
+     "opening": "SD03_PLAY_N",
+     "type": "sliding_door",
+     "connects_to": "R07_PLAY",
+     "position_m": [
+      -1.0005,
+      -0.0975
+     ],
+     "clear_width_mm": 2400
+    },
+    {
+     "opening": null,
+     "type": "open_plan",
+     "connects_to": "R03_DINING"
+    },
+    {
+     "opening": null,
+     "type": "open_plan",
+     "connects_to": "R11_STUDY"
+    }
+   ],
+   "camera": {
+    "position_m": [
+     -1.9105,
+     1.55,
+     -0.6355
+    ],
+    "target_m": [
+     2.6395,
+     1.3,
+     -0.6155
+    ],
+    "fov": 58
+   },
+   "best_view": "CAM_R06_HALL",
+   "intro_zh": "串聯公共區與私領域的東西向走道。",
+   "intro_en": "East–west spine linking public and private zones.",
+   "objects": [
+    "FLR_R06_HALL",
+    "CEIL_R06_HALL",
+    "LGT_HALL_DL1",
+    "LGT_HALL_DL2",
+    "LGT_HALL_DL3",
+    "LGT_HALL_DL4",
+    "FIN_R06_HALL_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R07_PLAY",
+   "name_zh": "輕起居室／遊戲室",
+   "name_en": "Family / Play Room",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     4761,
+     6058
+    ],
+    [
+     7460,
+     6058
+    ],
+    [
+     7460,
+     11062
+    ],
+    [
+     5060,
+     11062
+    ],
+    [
+     5060,
+     9562
+    ],
+    [
+     4711,
+     9562
+    ],
+    [
+     4711,
+     7148
+    ],
+    [
+     4761,
+     7148
+    ]
+   ],
+   "polygon_m": [
+    [
+     -2.4995,
+     -0.0775
+    ],
+    [
+     0.1995,
+     -0.0775
+    ],
+    [
+     0.1995,
+     4.9265
+    ],
+    [
+     -2.2005,
+     4.9265
+    ],
+    [
+     -2.2005,
+     3.4265
+    ],
+    [
+     -2.5495,
+     3.4265
+    ],
+    [
+     -2.5495,
+     1.0125
+    ],
+    [
+     -2.4995,
+     1.0125
+    ]
+   ],
+   "area_m2": 13.18,
+   "area_ping": 3.99,
+   "centroid_m": [
+    -1.175,
+    2.2195
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "SD03_PLAY_N",
+     "type": "sliding_door",
+     "connects_to": "R06_HALL",
+     "position_m": [
+      -1.0005,
+      -0.0975
+     ],
+     "clear_width_mm": 2400
+    },
+    {
+     "opening": "SD04_PLAY_W",
+     "type": "sliding_door",
+     "connects_to": "R05_LIVING",
+     "position_m": [
+      -2.5195,
+      0.4475
+     ],
+     "clear_width_mm": 1130
+    },
+    {
+     "opening": "SD06_PLAY_S",
+     "type": "sliding_door",
+     "connects_to": "B04_BAL_S",
+     "position_m": [
+      -0.4955,
+      5.0015
+     ],
+     "clear_width_mm": 1280
+    }
+   ],
+   "camera": {
+    "position_m": [
+     -0.0105,
+     1.65,
+     4.7145
+    ],
+    "target_m": [
+     -2.2605,
+     1.0,
+     0.7645
+    ],
+    "fov": 62
+   },
+   "best_view": "CAM_R07_PLAY",
+   "intro_zh": "雙向橫拉門的彈性空間，西側 KIDS 書櫃、OSIM 按摩椅，南向陽台採光。",
+   "intro_en": "Flexible room behind sliding doors: kids’ bookcase, massage chair, south light.",
+   "objects": [
+    "FLR_R07_PLAY",
+    "CEIL_R07_PLAY",
+    "CAB_PLAY_KIDS",
+    "CAB_PLAY_OPEN",
+    "FUR_MASSAGE",
+    "DEC_RUG_PLAY",
+    "FUR_PLAY_TABLE",
+    "LGT_PLAY_DL1",
+    "LGT_PLAY_DL2",
+    "LGT_PLAY_DL3",
+    "FIN_R07_PLAY_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R08_BATH1",
+   "name_zh": "客浴（小孩房）",
+   "name_en": "Ensuite Bath (Kids)",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     6798,
+     1575
+    ],
+    [
+     9185,
+     1575
+    ],
+    [
+     9185,
+     3054
+    ],
+    [
+     6798,
+     3054
+    ]
+   ],
+   "polygon_m": [
+    [
+     -0.4625,
+     -4.5605
+    ],
+    [
+     1.9245,
+     -4.5605
+    ],
+    [
+     1.9245,
+     -3.0815
+    ],
+    [
+     -0.4625,
+     -3.0815
+    ]
+   ],
+   "area_m2": 3.53,
+   "area_ping": 1.07,
+   "centroid_m": [
+    0.731,
+    -3.821
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2400,
+   "floor_material": "floor_microcement",
+   "entries_exits": [
+    {
+     "opening": "D05_BATH1",
+     "type": "swing_door",
+     "connects_to": "R10_KIDS",
+     "position_m": [
+      1.9745,
+      -3.4815
+     ],
+     "clear_width_mm": 800
+    },
+    {
+     "opening": "WN02_BATH1",
+     "type": "window",
+     "connects_to": "exterior",
+     "position_m": [
+      0.6375,
+      -4.6355
+     ],
+     "clear_width_mm": 600
+    }
+   ],
+   "camera": {
+    "position_m": [
+     1.7895,
+     1.6,
+     -3.1855
+    ],
+    "target_m": [
+     -0.0605,
+     1.0,
+     -4.3355
+    ],
+    "fov": 72
+   },
+   "best_view": "CAM_R08_BATH1",
+   "intro_zh": "由小孩房進出，浴缸、馬桶與單槽檯面。",
+   "intro_en": "Accessed from the kids’ room: bath, WC and vanity.",
+   "objects": [
+    "FLR_R08_BATH1",
+    "CEIL_R08_BATH1",
+    "FIX_BATH1_TUB",
+    "FIX_BATH1_WC",
+    "FIX_BATH1_VANITY",
+    "FIX_BATH1_VANITY_MIRROR",
+    "FIX_BATH1_SCREEN",
+    "LGT_BATH1_DL1",
+    "LGT_BATH1_DL2",
+    "FIN_R08_BATH1_LINING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R09_BATH2",
+   "name_zh": "客浴",
+   "name_en": "Guest Bath",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     6798,
+     3154
+    ],
+    [
+     9185,
+     3154
+    ],
+    [
+     9185,
+     4823
+    ],
+    [
+     6798,
+     4823
+    ]
+   ],
+   "polygon_m": [
+    [
+     -0.4625,
+     -2.9815
+    ],
+    [
+     1.9245,
+     -2.9815
+    ],
+    [
+     1.9245,
+     -1.3125
+    ],
+    [
+     -0.4625,
+     -1.3125
+    ]
+   ],
+   "area_m2": 3.98,
+   "area_ping": 1.21,
+   "centroid_m": [
+    0.731,
+    -2.147
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2400,
+   "floor_material": "floor_microcement",
+   "entries_exits": [
+    {
+     "opening": "D06_BATH2",
+     "type": "swing_door",
+     "connects_to": "R06_HALL",
+     "position_m": [
+      0.7765,
+      -1.2425
+     ],
+     "clear_width_mm": 858
+    }
+   ],
+   "camera": {
+    "position_m": [
+     1.0395,
+     1.65,
+     -1.4855
+    ],
+    "target_m": [
+     0.3395,
+     0.8,
+     -2.8355
+    ],
+    "fov": 76
+   },
+   "best_view": "CAM_R09_BATH2",
+   "intro_zh": "由走道進出之客用衛浴，內含管道間。",
+   "intro_en": "Guest bath off the hallway; contains a service shaft.",
+   "objects": [
+    "FLR_R09_BATH2",
+    "CEIL_R09_BATH2",
+    "FIX_BATH2_TUB",
+    "FIX_BATH2_WC",
+    "FIX_BATH2_VANITY",
+    "FIX_BATH2_VANITY_MIRROR",
+    "FIX_BATH2_SCREEN",
+    "LGT_BATH2_DL1",
+    "LGT_BATH2_DL2",
+    "FIN_R09_BATH2_LINING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R10_KIDS",
+   "name_zh": "小孩房",
+   "name_en": "Kids’ Room",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     9285,
+     1575
+    ],
+    [
+     13421,
+     1575
+    ],
+    [
+     13421,
+     4468
+    ],
+    [
+     11736,
+     4468
+    ],
+    [
+     11736,
+     4824
+    ],
+    [
+     9285,
+     4824
+    ]
+   ],
+   "polygon_m": [
+    [
+     2.0245,
+     -4.5605
+    ],
+    [
+     6.1605,
+     -4.5605
+    ],
+    [
+     6.1605,
+     -1.6675
+    ],
+    [
+     4.4755,
+     -1.6675
+    ],
+    [
+     4.4755,
+     -1.3115
+    ],
+    [
+     2.0245,
+     -1.3115
+    ]
+   ],
+   "area_m2": 12.84,
+   "area_ping": 3.88,
+   "centroid_m": [
+    4.0925,
+    -3.114
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "D05_BATH1",
+     "type": "swing_door",
+     "connects_to": "R08_BATH1",
+     "position_m": [
+      1.9745,
+      -3.4815
+     ],
+     "clear_width_mm": 800
+    },
+    {
+     "opening": "D07_KIDS",
+     "type": "swing_door",
+     "connects_to": "R06_HALL",
+     "position_m": [
+      2.5005,
+      -1.242
+     ],
+     "clear_width_mm": 952
+    },
+    {
+     "opening": "WN03_KIDS",
+     "type": "window",
+     "connects_to": "exterior",
+     "position_m": [
+      6.2435,
+      -3.336
+     ],
+     "clear_width_mm": 2099
+    }
+   ],
+   "camera": {
+    "position_m": [
+     2.2395,
+     1.65,
+     -2.0355
+    ],
+    "target_m": [
+     5.5395,
+     0.9,
+     -3.8355
+    ],
+    "fov": 64
+   },
+   "best_view": "CAM_R10_KIDS",
+   "intro_zh": "Queen 床、東側書桌與窗、1350 mm 衣櫃與 300 mm 書櫃。",
+   "intro_en": "Queen bed, east-window desk, 1350 mm wardrobe and 300 mm bookcase.",
+   "objects": [
+    "FLR_R10_KIDS",
+    "CEIL_R10_KIDS",
+    "FUR_KIDS_BED",
+    "FUR_KIDS_DESK",
+    "FUR_KIDS_CHAIR",
+    "CAB_KIDS_WARDROBE",
+    "CAB_KIDS_BOOK",
+    "LGT_KIDS_DL1",
+    "LGT_KIDS_DL2",
+    "LGT_KIDS_DL3",
+    "FIN_R10_KIDS_SKIRTING"
+   ],
+   "alternatives": [
+    "Infant layout: cots 780W×1370L and 769W×1230L (drawn dashed) instead of the Queen bed"
+   ]
+  },
+  {
+   "id": "R11_STUDY",
+   "name_zh": "書房",
+   "name_en": "Study",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     9947,
+     4963
+    ],
+    [
+     11836,
+     4963
+    ],
+    [
+     11836,
+     4568
+    ],
+    [
+     13421,
+     4568
+    ],
+    [
+     13421,
+     7273
+    ],
+    [
+     11046,
+     7273
+    ],
+    [
+     11046,
+     6058
+    ],
+    [
+     10946,
+     6058
+    ],
+    [
+     10946,
+     6849
+    ],
+    [
+     9947,
+     6849
+    ]
+   ],
+   "polygon_m": [
+    [
+     2.6865,
+     -1.1725
+    ],
+    [
+     4.5755,
+     -1.1725
+    ],
+    [
+     4.5755,
+     -1.5675
+    ],
+    [
+     6.1605,
+     -1.5675
+    ],
+    [
+     6.1605,
+     1.1375
+    ],
+    [
+     3.7855,
+     1.1375
+    ],
+    [
+     3.7855,
+     -0.0775
+    ],
+    [
+     3.6855,
+     -0.0775
+    ],
+    [
+     3.6855,
+     0.7135
+    ],
+    [
+     2.6865,
+     0.7135
+    ]
+   ],
+   "area_m2": 8.11,
+   "area_ping": 2.45,
+   "centroid_m": [
+    4.4235,
+    -0.625
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "D08_MASTER",
+     "type": "swing_door",
+     "connects_to": "R14_MASTER",
+     "position_m": [
+      3.1365,
+      0.7635
+     ],
+     "clear_width_mm": 900
+    },
+    {
+     "opening": "SD08_STUDY_E",
+     "type": "sliding_door",
+     "connects_to": "B06_BAL_E",
+     "position_m": [
+      6.2355,
+      0.1875
+     ],
+     "clear_width_mm": 1480
+    },
+    {
+     "opening": null,
+     "type": "open_plan",
+     "connects_to": "R06_HALL"
+    }
+   ],
+   "camera": {
+    "position_m": [
+     2.8895,
+     1.65,
+     -0.9855
+    ],
+    "target_m": [
+     5.9395,
+     1.1,
+     0.6645
+    ],
+    "fov": 60
+   },
+   "best_view": "CAM_R11_STUDY",
+   "intro_zh": "開放式書房，1585 mm 書牆與東向閱讀角，可通往東陽台。",
+   "intro_en": "Open study with a 1585 mm book wall and east reading nook opening to the east balcony.",
+   "objects": [
+    "FLR_R11_STUDY",
+    "CEIL_R11_STUDY",
+    "CAB_STUDY_BOOK",
+    "FUR_STUDY_CHAIR",
+    "FUR_STUDY_DESK",
+    "FUR_STUDY_DESKCHAIR",
+    "LGT_STUDY_FLOORLAMP",
+    "LGT_STUDY_DL1",
+    "LGT_STUDY_DL2",
+    "LGT_STUDY_DL3",
+    "FIN_R11_STUDY_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R12_CLOSET",
+   "name_zh": "更衣室",
+   "name_en": "Walk-in Robe",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     7598,
+     6158
+    ],
+    [
+     9847,
+     6158
+    ],
+    [
+     9847,
+     8657
+    ],
+    [
+     7598,
+     8657
+    ]
+   ],
+   "polygon_m": [
+    [
+     0.3375,
+     0.0225
+    ],
+    [
+     2.5865,
+     0.0225
+    ],
+    [
+     2.5865,
+     2.5215
+    ],
+    [
+     0.3375,
+     2.5215
+    ]
+   ],
+   "area_m2": 5.62,
+   "area_ping": 1.7,
+   "centroid_m": [
+    1.462,
+    1.272
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "D09_MBATH",
+     "type": "swing_door",
+     "connects_to": "R13_MBATH",
+     "position_m": [
+      1.5865,
+      2.5715
+     ],
+     "clear_width_mm": 800
+    },
+    {
+     "opening": "P01_ROBE",
+     "type": "opening",
+     "connects_to": "R14_MASTER",
+     "position_m": [
+      2.6365,
+      2.122
+     ],
+     "clear_width_mm": 799
+    }
+   ],
+   "camera": {
+    "position_m": [
+     1.0895,
+     1.65,
+     2.3645
+    ],
+    "target_m": [
+     2.4895,
+     1.1,
+     0.6645
+    ],
+    "fov": 66
+   },
+   "best_view": "CAM_R12_CLOSET",
+   "intro_zh": "U 型衣櫃與化妝桌，串接主臥與主浴。",
+   "intro_en": "U-shaped robe with dressing table, linking bedroom and ensuite.",
+   "objects": [
+    "FLR_R12_CLOSET",
+    "CEIL_R12_CLOSET",
+    "CAB_ROBE_N",
+    "CAB_ROBE_W",
+    "FUR_ROBE_VANITY",
+    "FUR_ROBE_STOOL",
+    "FIX_ROBE_MIRROR",
+    "LGT_CLOSET_DL1",
+    "LGT_CLOSET_DL2",
+    "FIN_R12_CLOSET_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R13_MBATH",
+   "name_zh": "主浴",
+   "name_en": "Master Ensuite",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     7598,
+     8757
+    ],
+    [
+     9847,
+     8757
+    ],
+    [
+     9847,
+     11074
+    ],
+    [
+     9839,
+     11074
+    ],
+    [
+     9839,
+     12124
+    ],
+    [
+     8297,
+     12124
+    ],
+    [
+     8297,
+     10507
+    ],
+    [
+     7598,
+     10507
+    ]
+   ],
+   "polygon_m": [
+    [
+     0.3375,
+     2.6215
+    ],
+    [
+     2.5865,
+     2.6215
+    ],
+    [
+     2.5865,
+     4.9385
+    ],
+    [
+     2.5785,
+     4.9385
+    ],
+    [
+     2.5785,
+     5.9885
+    ],
+    [
+     1.0365,
+     5.9885
+    ],
+    [
+     1.0365,
+     4.3715
+    ],
+    [
+     0.3375,
+     4.3715
+    ]
+   ],
+   "area_m2": 6.43,
+   "area_ping": 1.95,
+   "centroid_m": [
+    1.462,
+    3.4965
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2400,
+   "floor_material": "floor_microcement",
+   "entries_exits": [
+    {
+     "opening": "D09_MBATH",
+     "type": "swing_door",
+     "connects_to": "R12_CLOSET",
+     "position_m": [
+      1.5865,
+      2.5715
+     ],
+     "clear_width_mm": 800
+    },
+    {
+     "opening": "WN05_MBATH",
+     "type": "window",
+     "connects_to": "exterior",
+     "position_m": [
+      2.6535,
+      5.5735
+     ],
+     "clear_width_mm": 600
+    }
+   ],
+   "camera": {
+    "position_m": [
+     0.5395,
+     1.6,
+     4.2145
+    ],
+    "target_m": [
+     2.3395,
+     1.0,
+     2.8645
+    ],
+    "fov": 70
+   },
+   "best_view": "CAM_R13_MBATH",
+   "intro_zh": "雙槽檯面、獨立馬桶區與浴缸。",
+   "intro_en": "Double vanity, separate WC zone and bathtub alcove.",
+   "objects": [
+    "FLR_R13_MBATH",
+    "CEIL_R13_MBATH",
+    "FIX_MBATH_WC",
+    "FIX_MBATH_VANITY",
+    "FIX_MBATH_VANITY_MIRROR",
+    "FIX_MBATH_TUB",
+    "LGT_MBATH_DL1",
+    "LGT_MBATH_DL2",
+    "LGT_MBATH_DL3",
+    "FIN_R13_MBATH_LINING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "R14_MASTER",
+   "name_zh": "主臥",
+   "name_en": "Master Bedroom",
+   "kind": "interior",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     9947,
+     6949
+    ],
+    [
+     10946,
+     6949
+    ],
+    [
+     10946,
+     7373
+    ],
+    [
+     13421,
+     7373
+    ],
+    [
+     13421,
+     10947
+    ],
+    [
+     9947,
+     10947
+    ]
+   ],
+   "polygon_m": [
+    [
+     2.6865,
+     0.8135
+    ],
+    [
+     3.6855,
+     0.8135
+    ],
+    [
+     3.6855,
+     1.2375
+    ],
+    [
+     6.1605,
+     1.2375
+    ],
+    [
+     6.1605,
+     4.8115
+    ],
+    [
+     2.6865,
+     4.8115
+    ]
+   ],
+   "area_m2": 12.84,
+   "area_ping": 3.88,
+   "centroid_m": [
+    4.4235,
+    3.0245
+   ],
+   "floor_level_mm": 0,
+   "ceiling_mm": 2800,
+   "floor_material": "floor_oak",
+   "entries_exits": [
+    {
+     "opening": "D08_MASTER",
+     "type": "swing_door",
+     "connects_to": "R11_STUDY",
+     "position_m": [
+      3.1365,
+      0.7635
+     ],
+     "clear_width_mm": 900
+    },
+    {
+     "opening": "P01_ROBE",
+     "type": "opening",
+     "connects_to": "R12_CLOSET",
+     "position_m": [
+      2.6365,
+      2.122
+     ],
+     "clear_width_mm": 799
+    },
+    {
+     "opening": "SD07_MASTER_S",
+     "type": "sliding_door",
+     "connects_to": "B05_BAL_SE",
+     "position_m": [
+      3.931,
+      4.8865
+     ],
+     "clear_width_mm": 1379
+    },
+    {
+     "opening": "WN04_MASTER_E",
+     "type": "window",
+     "connects_to": "exterior",
+     "position_m": [
+      6.2355,
+      4.5115
+     ],
+     "clear_width_mm": 600
+    }
+   ],
+   "camera": {
+    "position_m": [
+     2.8895,
+     1.65,
+     4.6145
+    ],
+    "target_m": [
+     5.7395,
+     0.9,
+     2.1645
+    ],
+    "fov": 62
+   },
+   "best_view": "CAM_R14_MASTER",
+   "intro_zh": "Queen 床（1820×1900）面東床頭牆，南向落地窗通往陽台。",
+   "intro_en": "Queen bed (1820×1900) against an east feature wall; south glazing to the balcony.",
+   "objects": [
+    "FLR_R14_MASTER",
+    "CEIL_R14_MASTER",
+    "FUR_MASTER_BED",
+    "CAB_MASTER_HEAD",
+    "FUR_MASTER_NIGHT_1",
+    "FUR_MASTER_NIGHT_2",
+    "DEC_RUG_MASTER",
+    "FUR_MASTER_BENCH",
+    "DEC_PLANT_IN_2",
+    "LGT_MASTER_DL1",
+    "LGT_MASTER_DL2",
+    "LGT_MASTER_DL3",
+    "LGT_MASTER_DL4",
+    "FIN_R14_MASTER_SKIRTING"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "B01_BAL_N",
+   "name_zh": "後陽台",
+   "name_en": "Service Balcony",
+   "kind": "balcony",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     6848,
+     100
+    ],
+    [
+     9872,
+     100
+    ],
+    [
+     9872,
+     1425
+    ],
+    [
+     6848,
+     1425
+    ]
+   ],
+   "polygon_m": [
+    [
+     -0.4125,
+     -6.0355
+    ],
+    [
+     2.6115,
+     -6.0355
+    ],
+    [
+     2.6115,
+     -4.7105
+    ],
+    [
+     -0.4125,
+     -4.7105
+    ]
+   ],
+   "area_m2": 4.01,
+   "area_ping": 1.21,
+   "centroid_m": [
+    1.0995,
+    -5.373
+   ],
+   "floor_level_mm": -50,
+   "ceiling_mm": null,
+   "floor_material": "floor_paver",
+   "entries_exits": [
+    {
+     "opening": "D04_BACK",
+     "type": "swing_door",
+     "connects_to": "R04_KITCHEN",
+     "position_m": [
+      -0.4875,
+      -5.108
+     ],
+     "clear_width_mm": 795
+    }
+   ],
+   "camera": null,
+   "best_view": null,
+   "intro_zh": "廚房工作區外之後陽台。",
+   "intro_en": "Service balcony off the kitchen utility zone.",
+   "objects": [
+    "FLR_B01_BAL_N"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "B02_AC",
+   "name_zh": "冷氣室外機平台",
+   "name_en": "AC Ledge",
+   "kind": "ledge",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     9972,
+     375
+    ],
+    [
+     12379,
+     375
+    ],
+    [
+     12379,
+     1425
+    ],
+    [
+     9972,
+     1425
+    ]
+   ],
+   "polygon_m": [
+    [
+     2.7115,
+     -5.7605
+    ],
+    [
+     5.1185,
+     -5.7605
+    ],
+    [
+     5.1185,
+     -4.7105
+    ],
+    [
+     2.7115,
+     -4.7105
+    ]
+   ],
+   "area_m2": 2.53,
+   "area_ping": 0.76,
+   "centroid_m": [
+    3.915,
+    -5.2355
+   ],
+   "floor_level_mm": -50,
+   "ceiling_mm": null,
+   "floor_material": "floor_paver",
+   "entries_exits": [],
+   "camera": null,
+   "best_view": null,
+   "intro_zh": "冷氣室外機與不鏽鋼格柵。",
+   "intro_en": "Outdoor AC units behind a stainless grille.",
+   "objects": [
+    "FLR_B02_AC",
+    "FIX_AC_ODU_1",
+    "FIX_AC_ODU_2",
+    "FIX_AC_GRILLE"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "B03_BAL_SW",
+   "name_zh": "陽台（客廳）",
+   "name_en": "Living Balcony",
+   "kind": "balcony",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     150,
+     11212
+    ],
+    [
+     4149,
+     11212
+    ],
+    [
+     4149,
+     12171
+    ],
+    [
+     150,
+     12171
+    ]
+   ],
+   "polygon_m": [
+    [
+     -7.1105,
+     5.0765
+    ],
+    [
+     -3.1115,
+     5.0765
+    ],
+    [
+     -3.1115,
+     6.0355
+    ],
+    [
+     -7.1105,
+     6.0355
+    ]
+   ],
+   "area_m2": 3.84,
+   "area_ping": 1.16,
+   "centroid_m": [
+    -5.111,
+    5.556
+   ],
+   "floor_level_mm": -50,
+   "ceiling_mm": null,
+   "floor_material": "floor_paver",
+   "entries_exits": [
+    {
+     "opening": "SD05_LIVING_S",
+     "type": "sliding_door",
+     "connects_to": "R05_LIVING",
+     "position_m": [
+      -4.3895,
+      5.0015
+     ],
+     "clear_width_mm": 1980
+    }
+   ],
+   "camera": {
+    "position_m": [
+     -3.3605,
+     1.6,
+     5.8645
+    ],
+    "target_m": [
+     -6.9605,
+     0.9,
+     5.3645
+    ],
+    "fov": 64
+   },
+   "best_view": "CAM_B03_BAL_SW",
+   "intro_zh": "客廳南側陽台。",
+   "intro_en": "South balcony off the living room.",
+   "objects": [
+    "FLR_B03_BAL_SW",
+    "DEC_PLANT_BAL_1"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "B04_BAL_S",
+   "name_zh": "陽台（遊戲室）",
+   "name_en": "Play Balcony",
+   "kind": "balcony",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     5348,
+     11212
+    ],
+    [
+     8166,
+     11212
+    ],
+    [
+     8166,
+     12167
+    ],
+    [
+     5348,
+     12167
+    ]
+   ],
+   "polygon_m": [
+    [
+     -1.9125,
+     5.0765
+    ],
+    [
+     0.9055,
+     5.0765
+    ],
+    [
+     0.9055,
+     6.0315
+    ],
+    [
+     -1.9125,
+     6.0315
+    ]
+   ],
+   "area_m2": 2.69,
+   "area_ping": 0.81,
+   "centroid_m": [
+    -0.5035,
+    5.554
+   ],
+   "floor_level_mm": -50,
+   "ceiling_mm": null,
+   "floor_material": "floor_paver",
+   "entries_exits": [
+    {
+     "opening": "SD06_PLAY_S",
+     "type": "sliding_door",
+     "connects_to": "R07_PLAY",
+     "position_m": [
+      -0.4955,
+      5.0015
+     ],
+     "clear_width_mm": 1280
+    }
+   ],
+   "camera": null,
+   "best_view": null,
+   "intro_zh": "遊戲室南側陽台。",
+   "intro_en": "South balcony off the play room.",
+   "objects": [
+    "FLR_B04_BAL_S",
+    "DEC_PLANT_BAL_2"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "B05_BAL_SE",
+   "name_zh": "陽台（主臥）",
+   "name_en": "Master Balcony",
+   "kind": "balcony",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     9989,
+     11098
+    ],
+    [
+     12379,
+     11098
+    ],
+    [
+     12379,
+     12171
+    ],
+    [
+     9989,
+     12171
+    ]
+   ],
+   "polygon_m": [
+    [
+     2.7285,
+     4.9625
+    ],
+    [
+     5.1185,
+     4.9625
+    ],
+    [
+     5.1185,
+     6.0355
+    ],
+    [
+     2.7285,
+     6.0355
+    ]
+   ],
+   "area_m2": 2.56,
+   "area_ping": 0.78,
+   "centroid_m": [
+    3.9235,
+    5.499
+   ],
+   "floor_level_mm": -50,
+   "ceiling_mm": null,
+   "floor_material": "floor_paver",
+   "entries_exits": [
+    {
+     "opening": "SD07_MASTER_S",
+     "type": "sliding_door",
+     "connects_to": "R14_MASTER",
+     "position_m": [
+      3.931,
+      4.8865
+     ],
+     "clear_width_mm": 1379
+    }
+   ],
+   "camera": {
+    "position_m": [
+     2.9395,
+     1.6,
+     5.8145
+    ],
+    "target_m": [
+     5.0395,
+     0.9,
+     5.1645
+    ],
+    "fov": 66
+   },
+   "best_view": "CAM_B05_BAL_SE",
+   "intro_zh": "主臥南側陽台。",
+   "intro_en": "South balcony off the master bedroom.",
+   "objects": [
+    "FLR_B05_BAL_SE",
+    "DEC_PLANT_BAL_3"
+   ],
+   "alternatives": []
+  },
+  {
+   "id": "B06_BAL_E",
+   "name_zh": "陽台（書房）",
+   "name_en": "Study Balcony",
+   "kind": "balcony",
+   "source": "drawn",
+   "polygon_mm": [
+    [
+     13571,
+     4724
+    ],
+    [
+     14421,
+     4724
+    ],
+    [
+     14421,
+     7503
+    ],
+    [
+     13571,
+     7503
+    ]
+   ],
+   "polygon_m": [
+    [
+     6.3105,
+     -1.4115
+    ],
+    [
+     7.1605,
+     -1.4115
+    ],
+    [
+     7.1605,
+     1.3675
+    ],
+    [
+     6.3105,
+     1.3675
+    ]
+   ],
+   "area_m2": 2.36,
+   "area_ping": 0.71,
+   "centroid_m": [
+    6.7355,
+    -0.022
+   ],
+   "floor_level_mm": -50,
+   "ceiling_mm": null,
+   "floor_material": "floor_paver",
+   "entries_exits": [
+    {
+     "opening": "SD08_STUDY_E",
+     "type": "sliding_door",
+     "connects_to": "R11_STUDY",
+     "position_m": [
+      6.2355,
+      0.1875
+     ],
+     "clear_width_mm": 1480
+    }
+   ],
+   "camera": null,
+   "best_view": null,
+   "intro_zh": "書房東側陽台。",
+   "intro_en": "East balcony off the study.",
+   "objects": [
+    "FLR_B06_BAL_E",
+    "DEC_PLANT_BAL_4"
+   ],
+   "alternatives": []
+  }
+ ],
+ "adjacency": [
+  {
+   "a": "EXT_CORRIDOR",
+   "b": "R01_ENTRY",
+   "via": "D01_MAIN",
+   "type": "swing_door"
+  },
+  {
+   "a": "R01_ENTRY",
+   "b": "R02_STORE",
+   "via": "D02_STORE",
+   "type": "swing_door"
+  },
+  {
+   "a": "R04_KITCHEN",
+   "b": "B01_BAL_N",
+   "via": "D04_BACK",
+   "type": "swing_door"
+  },
+  {
+   "a": "R10_KIDS",
+   "b": "R08_BATH1",
+   "via": "D05_BATH1",
+   "type": "swing_door"
+  },
+  {
+   "a": "R06_HALL",
+   "b": "R09_BATH2",
+   "via": "D06_BATH2",
+   "type": "swing_door"
+  },
+  {
+   "a": "R06_HALL",
+   "b": "R10_KIDS",
+   "via": "D07_KIDS",
+   "type": "swing_door"
+  },
+  {
+   "a": "R11_STUDY",
+   "b": "R14_MASTER",
+   "via": "D08_MASTER",
+   "type": "swing_door"
+  },
+  {
+   "a": "R12_CLOSET",
+   "b": "R13_MBATH",
+   "via": "D09_MBATH",
+   "type": "swing_door"
+  },
+  {
+   "a": "R12_CLOSET",
+   "b": "R14_MASTER",
+   "via": "P01_ROBE",
+   "type": "opening"
+  },
+  {
+   "a": "R03_DINING",
+   "b": "R04_KITCHEN",
+   "via": "SD01_KITCHEN_W",
+   "type": "sliding_door"
+  },
+  {
+   "a": "R06_HALL",
+   "b": "R04_KITCHEN",
+   "via": "SD02_KITCHEN_S",
+   "type": "sliding_door"
+  },
+  {
+   "a": "R06_HALL",
+   "b": "R07_PLAY",
+   "via": "SD03_PLAY_N",
+   "type": "sliding_door"
+  },
+  {
+   "a": "R05_LIVING",
+   "b": "R07_PLAY",
+   "via": "SD04_PLAY_W",
+   "type": "sliding_door"
+  },
+  {
+   "a": "R05_LIVING",
+   "b": "B03_BAL_SW",
+   "via": "SD05_LIVING_S",
+   "type": "sliding_door"
+  },
+  {
+   "a": "R07_PLAY",
+   "b": "B04_BAL_S",
+   "via": "SD06_PLAY_S",
+   "type": "sliding_door"
+  },
+  {
+   "a": "R14_MASTER",
+   "b": "B05_BAL_SE",
+   "via": "SD07_MASTER_S",
+   "type": "sliding_door"
+  },
+  {
+   "a": "R11_STUDY",
+   "b": "B06_BAL_E",
+   "via": "SD08_STUDY_E",
+   "type": "sliding_door"
+  },
+  {
+   "a": "R01_ENTRY",
+   "b": "R03_DINING",
+   "via": null,
+   "type": "open"
+  },
+  {
+   "a": "R03_DINING",
+   "b": "R05_LIVING",
+   "via": null,
+   "type": "open"
+  },
+  {
+   "a": "R03_DINING",
+   "b": "R06_HALL",
+   "via": null,
+   "type": "open"
+  },
+  {
+   "a": "R06_HALL",
+   "b": "R11_STUDY",
+   "via": null,
+   "type": "open"
+  }
+ ],
+ "totals": {
+  "interior_m2": 126.87,
+  "balcony_m2": 17.99
+ }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "acl16004-wu-residence",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "qa:path": "tsx scripts/qa-path.ts",
+    "optimize:model": "gltf-transform webp public/models/scene.glb public/models/scene.tmp.glb --quality 88 && gltf-transform draco public/models/scene.tmp.glb public/models/scene.opt.glb --quantize-position 16 --quantize-texcoord 14 && node scripts/rm-tmp.mjs"
+  },
+  "dependencies": {
+    "gsap": "3.12.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "0.160.0"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "4.1.1",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@types/three": "0.160.0",
+    "@vitejs/plugin-react": "4.3.4",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}
